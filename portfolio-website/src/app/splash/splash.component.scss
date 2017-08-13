@@ -11,11 +11,10 @@
 .cover-container{
   display:flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
   align-items: center;
+  margin: auto;
+  flex-basis: 70%;
 }
 
 .cover-container .cover-title{
