@@ -5,15 +5,18 @@
   top: 0;
   text-color: $primary-text-color;
   color: $primary-text-color;
-  padding: 15px;
   width: 100%;
 }
 
 .navbar .nav-links-container{
   float: right;
+  padding:15px;
 }
 
 .nav-link{
   margin-right: 5px;
   margin-left: 5px;
+}
+
+.navbar .logo-container{
 }
