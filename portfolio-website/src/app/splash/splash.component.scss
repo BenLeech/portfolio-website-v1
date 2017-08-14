@@ -36,3 +36,25 @@
   width: 70%;
   color: $primary-text-color;
 }
+
+.down-arrow{
+  position: absolute;
+  vertical-align: bottom;
+  width: 100%;
+  font-size: 20px;
+  bottom: 15px;
+  color: $primary-text-color;
+  text-align: center;
+}
+
+@media (max-height: 400px){
+  .down-arrow{
+    display: none;
+  }
+
+  .cover-container{
+    margin-top: 110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

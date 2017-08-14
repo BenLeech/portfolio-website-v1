@@ -1,16 +1,20 @@
 @import "../../assets/variables";
 
-.navbar {
-  position:fixed;
+.navbar-wrapper{
+  position: fixed;
   top: 0;
-  text-color: $primary-text-color;
-  color: $primary-text-color;
   width: 100%;
+}
+
+.navbar {
+  color: $primary-text-color;
+  height: auto;
+  overflow: auto;
+  padding: 25px;
 }
 
 .navbar .nav-links-container{
   float: right;
-  padding:25px;
   margin-right: 25px;
 }
 
@@ -27,6 +31,30 @@
 
 .navbar .logo-container{
   float: left;
-  padding: 25px;
+  padding: 10px 25px 10px 25px;
   margin-left: 25px;
+  vertical-align: middle;
+}
+
+.dropdown-container{
+  color: $primary-text-color;
+  width: 100%;
+}
+
+.navbar .fa-bars{
+  display: none;
+}
+
+@media (max-width: 780px){
+  .navbar{
+    background-color: $secondary-color;
+  }
+
+  .nav-link{
+    display: none;
+  }
+
+  .navbar .fa-bars{
+    display: block;
+  }
 }

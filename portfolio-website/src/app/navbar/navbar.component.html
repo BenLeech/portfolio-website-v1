@@ -1,9 +1,21 @@
-<div class="navbar">
-  <div class="logo-container">
-    Ben Leech
+<div class="navbar-wrapper">
+  <div class="navbar">
+    <div class="logo-container">
+      Ben Leech
+    </div>
+    <div class="nav-links-container">
+      <span class="nav-link">About</span>
+      <span class="nav-link">Portfolio</span>
+      <i class="fa fa-bars" aria-hidden="true" (click)="toggleDropdown()"></i>
+    </div>
   </div>
-  <div class="nav-links-container">
-    <span class="nav-link">About</span>
-    <span class="nav-link">Portfolio</span>
+  <div class="dropdown-container" *ngIf="showDropdown">
+    <div class="nav-dropdown-link-row">
+      <span class="nav-dropdown-link">About</span>
+    </div>
+    <div class="nav-dropdown-link-row">
+      <span class="nav-dropdown-link">Portfolio</span>
+    </div>
   </div>
 </div>
+
