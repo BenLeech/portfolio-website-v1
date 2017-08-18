@@ -58,3 +58,19 @@
     margin-right: auto;
   }
 }
+
+@media (max-width: 425px){
+  .down-arrow{
+    display: none;
+  }
+
+  .cover-container{
+    flex-basis: 90%;
+  }
+
+  .cover-container{
+    margin-top: 110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -8,32 +8,20 @@
 
 .navbar {
   color: $primary-text-color;
-  height: auto;
-  overflow: auto;
-  padding: 25px;
-}
-
-.navbar .nav-links-container{
-  float: right;
-  margin-right: 25px;
+  padding: 0 45px 0 45px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-link{
-  display: inline-block;
-  padding: 10px 15px 10px 15px;
-  margin-right: 10px;
+  padding: 0 15px 0 15px;
   margin-left: 10px;
 }
 
 .nav-link:hover{
   border-bottom: solid 5px $active-color;
-}
-
-.navbar .logo-container{
-  float: left;
-  padding: 10px 25px 10px 25px;
-  margin-left: 25px;
-  vertical-align: middle;
 }
 
 .dropdown-container{
