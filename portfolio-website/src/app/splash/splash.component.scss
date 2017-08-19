@@ -14,7 +14,6 @@
   text-align: center;
   align-items: center;
   margin: auto;
-  flex-basis: 70%;
 }
 
 .cover-container .cover-title{
@@ -26,14 +25,14 @@
 
 .cover-container .cover-message{
   font-size: 20px;
-  max-width: 60%;
+  max-width: 95%;
   color: $primary-text-color;
   margin-bottom: 25px;
 }
 
 .cover-container .cover-submessage{
   font-size: 16px;
-  width: 70%;
+  max-width: 95%;
   color: $primary-text-color;
 }
 
@@ -59,18 +58,8 @@
   }
 }
 
-@media (max-width: 425px){
+@media (max-width: 426px){
   .down-arrow{
     display: none;
-  }
-
-  .cover-container{
-    flex-basis: 90%;
-  }
-
-  .cover-container{
-    margin-top: 110px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }

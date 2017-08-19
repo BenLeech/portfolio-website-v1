@@ -27,6 +27,11 @@
 .dropdown-container{
   color: $primary-text-color;
   width: 100%;
+  background-color: $secondary-color;
+}
+
+.dropdown-container .nav-dropdown-link-row{
+  padding: 15px;
 }
 
 .navbar .fa-bars{
@@ -44,5 +49,11 @@
 
   .navbar .fa-bars{
     display: block;
+  }
+}
+
+@media (min-width: 781px){
+  .dropdown-container{
+    display: none;
   }
 }
