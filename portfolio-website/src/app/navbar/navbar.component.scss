@@ -16,7 +16,7 @@
 }
 
 .nav-link{
-  padding: 0 15px 0 15px;
+  padding: 0px 15px 10px 15px;
   margin-left: 10px;
 }
 
@@ -32,6 +32,11 @@
 
 .dropdown-container .nav-dropdown-link-row{
   padding: 15px;
+}
+
+.dropdown-container .nav-dropdown-link-row:hover{
+  background-color: rgb(31, 41, 46);
+  color: #b4b4b4;
 }
 
 .navbar .fa-bars{

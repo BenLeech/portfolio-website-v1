@@ -44,6 +44,8 @@
   bottom: 15px;
   color: $primary-text-color;
   text-align: center;
+  -webkit-animation: mymove 2s infinite;
+  -webkit-animation-delay: 4s;
 }
 
 @media (max-height: 400px){
@@ -62,4 +64,10 @@
   .down-arrow{
     display: none;
   }
+}
+
+@-webkit-keyframes mymove {
+  0%{opacity: 1; bottom: 15px;}
+  50%{opacity: 0.5; bottom: 10px;}
+  100%{opacity: 1; bottom: 15px;}
 }
