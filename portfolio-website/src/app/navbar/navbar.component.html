@@ -9,7 +9,8 @@
       <i class="fa fa-bars" aria-hidden="true" (click)="toggleDropdown()"></i>
     </div>
   </div>
-  <div class="dropdown-container" *ngIf="showDropdown">
+  <div class="dropdown-container"
+       [ngClass]="{'dropdown-container-down': showDropdown, 'dropdown-container-up': !showDropdown}">
     <div class="nav-dropdown-link-row">
       <span class="nav-dropdown-link">About</span>
     </div>

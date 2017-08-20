@@ -30,6 +30,17 @@
   background-color: $secondary-color;
 }
 
+.dropdown-container-down{
+  max-height: 600px;
+  transition: max-height 0.25s ease-in;
+}
+
+.dropdown-container-up{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.15s ease-out;
+}
+
 .dropdown-container .nav-dropdown-link-row{
   padding: 15px;
 }
