@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,14 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   showDropdown: boolean = false;
-
-  constructor() { }
+  showNav: boolean = false;
 
   ngOnInit() {
+
   }
 
   toggleDropdown(){
     this.showDropdown = !this.showDropdown;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  handleScrollEvent(){
+    this.showNav = (window.pageYOffset > (window.innerHeight * 0.75));
   }
 
 }
