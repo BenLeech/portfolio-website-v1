@@ -2,18 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { SplashComponent } from './splash/splash.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { PortfolioDisplayComponent } from './portfolio-display/portfolio-display.component';
+import { SplashComponent } from './components/splash/splash.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PortfolioDisplayComponent } from './components/portfolio-display/portfolio-display.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashComponent,
     NavbarComponent,
-    HomeComponent,
-    PortfolioDisplayComponent
+    PortfolioDisplayComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule

@@ -1,13 +1,14 @@
 import {Component, OnInit, Input} from '@angular/core';
+import {PortfolioElement} from "../../model/Portfolio-Element";
 
 @Component({
-  selector: 'app-portfolio-display',
+  selector: 'portfolio-display',
   templateUrl: './portfolio-display.component.html',
   styleUrls: ['./portfolio-display.component.scss']
 })
 export class PortfolioDisplayComponent implements OnInit {
 
-  @Input() title: string;
+  @Input() element: PortfolioElement;
 
   constructor() { }
 

@@ -1,8 +1,11 @@
 <div class="portfolio-display-wrapper">
   <div class="display-image">
-
+    <img src={{element.imagePath}} />
   </div>
   <div class="display-title">
-
+    {{element.title}}
+  </div>
+  <div class="display-tags">
+    <span *ngFor="let tag of element.tags; let isLast=last">{{tag}}{{isLast?'':','}} </span>
   </div>
 </div>

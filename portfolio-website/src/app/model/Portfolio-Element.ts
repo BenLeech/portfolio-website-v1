@@ -1,3 +1,7 @@
-/**
- * Created by BenLeech on 2017-08-26.
- */
+export interface PortfolioElement{
+  title: string;
+  description?: string;
+  imagePath: string;
+  linkPath?: string;
+  tags?: Array<string>;
+}
