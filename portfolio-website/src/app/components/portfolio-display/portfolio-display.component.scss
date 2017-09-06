@@ -10,6 +10,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+
   max-height: 500px;
   box-shadow: 0 3px 5px #a0a0a0;
   margin: 5px;
@@ -17,14 +18,16 @@
 }
 
 .portfolio-display-wrapper .display-image img{
-  max-width: 100%;
-  max-height: 100vh;
   width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
+
 
 .display-image{
   overflow: hidden;
   max-height: 450px;
+  height: 100%;
 }
 
 .display-title{
@@ -40,12 +43,12 @@
 
 @media screen and (min-width: 600px) {
   :host {
-    width: 40%;
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 1000px) {
   :host {
-    width: calc(100% / 3);
+    //width: calc(100% / 3);
   }
 }
