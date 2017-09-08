@@ -6,6 +6,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .cover-container{
@@ -39,15 +40,14 @@
 
 .down-arrow{
   position: absolute;
-  vertical-align: bottom;
-  width: 100%;
   font-size: 20px;
   bottom: 15px;
+  left: 0;
+  width: 100%;
   color: $primary-text-color;
   text-align: center;
   -webkit-animation: fade-and-hover 2s infinite;
   -webkit-animation-delay: 4s;
-  z-index: 0;
 }
 
 .featured-container{

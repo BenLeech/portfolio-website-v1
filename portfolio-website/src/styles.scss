@@ -6,6 +6,14 @@ body, html{
   //consider using open sans
 }
 
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+}
+
 .display-none{
   display: none;
 }
