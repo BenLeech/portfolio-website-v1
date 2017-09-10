@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
     this.showDropdown = !this.showDropdown;
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', [])
   handleScrollEvent(){
     this.showNav = (window.pageYOffset > (window.innerHeight * 0.75));
   }

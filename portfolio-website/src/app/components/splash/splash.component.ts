@@ -16,8 +16,6 @@ export class SplashComponent implements OnInit {
   testElement2: PortfolioElement =
     {title: "Test", imagePath:basePath+"test.JPG"};
 
-
-
   constructor() { }
 
   ngOnInit() {

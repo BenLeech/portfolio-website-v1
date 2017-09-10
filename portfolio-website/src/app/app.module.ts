@@ -6,6 +6,8 @@ import { SplashComponent } from './components/splash/splash.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PortfolioDisplayComponent } from './components/portfolio-display/portfolio-display.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FeaturedWorkComponent } from './components/featured-work/featured-work.component';
+import {PortfolioService} from "./services/portfolio.service";
 
 @NgModule({
   declarations: [
@@ -13,11 +15,13 @@ import { FooterComponent } from './components/footer/footer.component';
     SplashComponent,
     NavbarComponent,
     PortfolioDisplayComponent,
-    FooterComponent
+    FooterComponent,
+    FeaturedWorkComponent
   ],
   imports: [
     BrowserModule
   ],
+  providers: [PortfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

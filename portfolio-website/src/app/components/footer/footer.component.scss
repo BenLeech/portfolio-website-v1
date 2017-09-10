@@ -1,7 +1,15 @@
+@import "../../../assets/variables";
+
+.footer{
+  padding-top: 50px;
+}
+
 .social-media-container{
   font-size: 26px;
+  color: $highlight-color;
 }
 
 .copyright-info{
   font-size: 12px;
+  color: $off-white;
 }
