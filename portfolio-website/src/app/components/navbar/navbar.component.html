@@ -11,11 +11,16 @@
   </div>
   <div class="dropdown-container"
        [ngClass]="{'dropdown-container-down': showDropdown, 'dropdown-container-up': !showDropdown}">
-    <div class="nav-dropdown-link-row">
-      <span class="nav-dropdown-link">About</span>
+    <div class="dropdown-inner">
+      <div class="nav-dropdown-link-row">
+        <span class="nav-dropdown-link">About</span>
+      </div>
+      <div class="nav-dropdown-link-row">
+        <span class="nav-dropdown-link">Portfolio</span>
+      </div>
     </div>
-    <div class="nav-dropdown-link-row">
-      <span class="nav-dropdown-link">Portfolio</span>
+    <div class="dropdown-end">
+      <div class="dropdown-triangle"></div>
     </div>
   </div>
 </div>

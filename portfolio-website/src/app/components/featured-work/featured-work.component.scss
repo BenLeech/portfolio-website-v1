@@ -18,8 +18,16 @@
 }
 
 .btn-view-more{
-  color: white;
-  border: none;
-  padding: 10px;
+  color: $active-color;
+  font-size: 16px;
+  border: solid 2px $active-color;
+  padding: 10px 15px 10px 15px;
+  background-color: transparent;
+}
+
+.divider{
   background-color: $active-color;
+  height: 2px;
+  width: 25%;
+  margin-bottom: 15px;
 }
