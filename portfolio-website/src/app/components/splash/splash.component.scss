@@ -1,13 +1,28 @@
 @import "../../../assets/variables";
 
 .splash-container{
-  background-color: $primary-color;
+  //background-color: $primary-color;
   width: 100%;
   min-height: 100%;
   display: flex;
   overflow: auto;
   align-items: center;
   position: relative;
+  background-image: url('../../../assets/img/cover-photo1.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.splash-container:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right,$primary-color,$active-color);
+  opacity: .6;
 }
 
 .cover-container{
@@ -17,6 +32,7 @@
   align-items: center;
   margin: auto;
   box-sizing: border-box;
+  z-index: 5;
 }
 
 .cover-container .cover-title{
