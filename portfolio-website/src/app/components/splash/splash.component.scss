@@ -39,6 +39,21 @@
   color: $primary-text-color;
 }
 
+.separator-container{
+  height: 200px;
+  background-color: $primary-color;
+  width: 100%;
+}
+
+.about-me-container{
+  width: 100%;
+  background-color: $off-white;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
 .down-arrow{
   position: absolute;
   font-size: 20px;

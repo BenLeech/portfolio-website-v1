@@ -1,15 +1,23 @@
 @import "../../../assets/variables";
 
 .footer{
-  padding-top: 50px;
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .social-media-container{
   font-size: 26px;
   color: $highlight-color;
+  margin-bottom: 20px;
 }
 
 .copyright-info{
   font-size: 12px;
   color: $off-white;
+}
+
+.fa{
+  padding-left: 5px;
 }

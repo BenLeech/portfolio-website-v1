@@ -8,6 +8,7 @@ import { PortfolioDisplayComponent } from './components/portfolio-display/portfo
 import { FooterComponent } from './components/footer/footer.component';
 import { FeaturedWorkComponent } from './components/featured-work/featured-work.component';
 import {PortfolioService} from "./services/portfolio.service";
+import { GreetingComponent } from './components/greeting/greeting.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {PortfolioService} from "./services/portfolio.service";
     NavbarComponent,
     PortfolioDisplayComponent,
     FooterComponent,
-    FeaturedWorkComponent
+    FeaturedWorkComponent,
+    GreetingComponent
   ],
   imports: [
     BrowserModule

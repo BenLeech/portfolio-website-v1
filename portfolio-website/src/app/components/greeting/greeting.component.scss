@@ -1,0 +1,33 @@
+@import "../../../assets/variables";
+
+.personal-image{
+  max-width: 100%;
+  float: right;
+  shape-outside: circle(50%);
+  height: 200px;
+  margin: 15px;
+}
+
+.personal-image img{
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.greeting-message{
+  max-width: 70%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.greeting-message h3{
+  color: $active-color;
+}
+
+.greeting-container{
+  overflow: hidden;
+  height: 100%;
+  max-width: 840px;
+}
+
+

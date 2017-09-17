@@ -10,7 +10,7 @@ export class PortfolioService {
     {title: "University Professor Profile website", imagePath:basePath+"helloWorldProjectCover.png",
       tags: ['HTML', 'CSS', 'Version Control', 'Javascript', 'jQuery']};
   private testElement: PortfolioElement =
-    {title: "Test", imagePath:basePath+"test.JPG", tags: ['test']};
+    {title: "Test", imagePath:basePath+"test.JPG", tags: ['test, PC: Kathryn Cullen']};
 
   constructor() { }
 

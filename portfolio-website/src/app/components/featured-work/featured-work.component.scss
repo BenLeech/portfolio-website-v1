@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.featured-work-container h2{
+  color: $active-color;
+}
+
 .featured-work-inner{
   display: flex;
   flex-wrap: wrap;
