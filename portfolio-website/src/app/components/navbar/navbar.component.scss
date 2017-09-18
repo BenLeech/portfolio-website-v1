@@ -31,6 +31,7 @@
 }
 
 .top-nav .nav-link:hover{
+  height: 75%;
   border-bottom: solid 5px $active-color;
 }
 
@@ -41,7 +42,7 @@
 .dropdown-inner{
   color: $primary-text-color;
   width: 100%;
-  background-color: $secondary-color;
+  background-color: $primary-color;
 }
 
 .dropdown-end{
@@ -54,7 +55,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: linear-gradient(to right bottom, $secondary-color 48%, transparent 50%);
+  background: linear-gradient(to right bottom, $primary-color 48%, transparent 50%);
 }
 
 .dropdown-container-down{
@@ -73,7 +74,7 @@
 }
 
 .dropdown-container .nav-dropdown-link-row:hover{
-  background-color: rgb(31, 41, 46);
+  background-color: $primary-hover;
   color: #b4b4b4;
 }
 
@@ -82,16 +83,16 @@
 }
 
 .sticky-nav{
-  background-color: $secondary-color;
+  background-color: $primary-color;
 }
 
 .sticky-nav .nav-link:hover{
-  background-color: #43585f;
+  background-color: $primary-hover;
 }
 
 @media (max-width: 780px){
   .navbar{
-    background-color: $secondary-color;
+    background-color: $primary-color;
   }
 
   .nav-link{

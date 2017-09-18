@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FeaturedWorkComponent } from './components/featured-work/featured-work.component';
 import {PortfolioService} from "./services/portfolio.service";
 import { GreetingComponent } from './components/greeting/greeting.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GreetingComponent } from './components/greeting/greeting.component';
     PortfolioDisplayComponent,
     FooterComponent,
     FeaturedWorkComponent,
-    GreetingComponent
+    GreetingComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule
