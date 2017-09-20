@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SplashComponent } from './components/splash/splash.component';
@@ -10,6 +11,7 @@ import { FeaturedWorkComponent } from './components/featured-work/featured-work.
 import {PortfolioService} from "./services/portfolio.service";
 import { GreetingComponent } from './components/greeting/greeting.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     AboutMeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, AppRoutingModule
   ],
   providers: [PortfolioService],
   bootstrap: [AppComponent]

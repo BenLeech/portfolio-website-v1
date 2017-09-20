@@ -4,19 +4,15 @@
       Ben Leech
     </div>
     <div class="nav-links-container">
-      <span class="nav-link">About</span>
-      <span class="nav-link">Portfolio</span>
+      <span class="nav-link" *ngFor="let navLink of navLinks" routerLink="[navLink.link]">{{navLink.text}}</span>
       <i class="fa fa-bars" aria-hidden="true" (click)="toggleDropdown()"></i>
     </div>
   </div>
   <div class="dropdown-container"
        [ngClass]="{'dropdown-container-down': showDropdown, 'dropdown-container-up': !showDropdown}">
     <div class="dropdown-inner">
-      <div class="nav-dropdown-link-row">
-        <span class="nav-dropdown-link">About</span>
-      </div>
-      <div class="nav-dropdown-link-row">
-        <span class="nav-dropdown-link">Portfolio</span>
+      <div class="nav-dropdown-link-row" *ngFor="let navLink of navLinks">
+        <span class="nav-dropdown-link" routerLink='[./]'>{{navLink.text}}</span>
       </div>
     </div>
     <div class="dropdown-end">
