@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PortfolioElement} from "../../model/Portfolio-Element";
-
-const basePath = "../../../assets/img/portfolio/";
+import {NavigationService} from "../../services/navigation.service";
 
 @Component({
   selector: 'app-splash',
@@ -10,15 +8,11 @@ const basePath = "../../../assets/img/portfolio/";
 })
 export class SplashComponent implements OnInit {
 
-  testElement: PortfolioElement =
-    {title: "University Professor Profile website", imagePath:basePath+"helloWorldProjectCover.png",
-    tags: ['HTML', 'CSS', 'Version Control', 'Javascript', 'jQuery']};
-  testElement2: PortfolioElement =
-    {title: "Test", imagePath:basePath+"test.JPG"};
-
-  constructor() { }
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit() {
+    this.navigationService.setScrollPercentage(0.75);
+    this.navigationService.updateNavbarSubject.next(false);
   }
 
 }

@@ -1,6 +1,7 @@
 import {Component, OnInit, HostListener} from '@angular/core';
 import {NavLink} from "../../model/Nav-Link";
-import {RouterLink, Router} from '@angular/router';
+import {Router} from '@angular/router';
+import {NavigationService} from "../../services/navigation.service";
 
 @Component({
   selector: 'app-navbar',
@@ -15,12 +16,13 @@ export class NavbarComponent implements OnInit {
 
   navLinks:Array<NavLink> = [];
 
-  constructor(private router: Router){
-
-  }
+  constructor(private router: Router, private navigationService: NavigationService){}
 
   ngOnInit() {
     this.getNavLinks();
+    this.navigationService.updateNavbarSubject.subscribe(value => {
+      this.showNav = value;
+    });
   }
 
   toggleDropdown(){
@@ -29,17 +31,12 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   handleScrollEvent(){
-    this.showNav = (window.pageYOffset > (window.innerHeight * 0.75));
-  }
-
-  navigateToLink(navLink: NavLink){
-    console.log("hi");
-    this.router.navigate([navLink.link]);
+    this.showNav = (window.pageYOffset > (window.innerHeight * this.navigationService.getScrollPercentage()));
   }
 
   private getNavLinks(){
-    let aboutLink: NavLink = {text: 'About', link: './'};
-    let portfolioLink: NavLink = {text: 'Portfolio', link: './'};
+    let aboutLink: NavLink = {text: 'About', link: '/about'};
+    let portfolioLink: NavLink = {text: 'Portfolio', link: 'home'};
 
     this.navLinks = [aboutLink,portfolioLink];
   }

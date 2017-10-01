@@ -17,3 +17,7 @@ body, html{
 .text-group{
   white-space: nowrap;
 }
+
+*:focus {
+  outline: none;
+}

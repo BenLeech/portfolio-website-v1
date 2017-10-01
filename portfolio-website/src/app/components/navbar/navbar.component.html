@@ -1,10 +1,10 @@
 <div class="navbar-wrapper">
   <div class="navbar" [ngClass]="{'sticky-nav': showNav, 'top-nav': !showNav}">
-    <div class="logo-container">
+    <div class="logo-container" routerLink='/home'>
       Ben Leech
     </div>
     <div class="nav-links-container">
-      <span class="nav-link" *ngFor="let navLink of navLinks" routerLink="[navLink.link]">{{navLink.text}}</span>
+      <span class="nav-link" *ngFor="let navLink of navLinks" routerLink="about">{{navLink.text}}</span>
       <i class="fa fa-bars" aria-hidden="true" (click)="toggleDropdown()"></i>
     </div>
   </div>
@@ -12,7 +12,7 @@
        [ngClass]="{'dropdown-container-down': showDropdown, 'dropdown-container-up': !showDropdown}">
     <div class="dropdown-inner">
       <div class="nav-dropdown-link-row" *ngFor="let navLink of navLinks">
-        <span class="nav-dropdown-link" routerLink='[./]'>{{navLink.text}}</span>
+        <span class="nav-dropdown-link" routerLink='[navLink.link]'>{{navLink.text}}</span>
       </div>
     </div>
     <div class="dropdown-end">

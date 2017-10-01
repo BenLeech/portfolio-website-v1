@@ -12,6 +12,7 @@ import {PortfolioService} from "./services/portfolio.service";
 import { GreetingComponent } from './components/greeting/greeting.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {NavigationService} from "./services/navigation.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import {AppRoutingModule} from "./app-routing.module";
   imports: [
     BrowserModule, AppRoutingModule
   ],
-  providers: [PortfolioService],
+  providers: [PortfolioService, NavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
