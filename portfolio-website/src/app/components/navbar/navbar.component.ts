@@ -31,7 +31,8 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   handleScrollEvent(){
-    this.showNav = (window.pageYOffset > (window.innerHeight * this.navigationService.getScrollPercentage()));
+    this.showNav = (this.navigationService.getScrollPercentage() === 0) ? true :
+      (window.pageYOffset > (window.innerHeight * this.navigationService.getScrollPercentage()));
   }
 
   private getNavLinks(){
