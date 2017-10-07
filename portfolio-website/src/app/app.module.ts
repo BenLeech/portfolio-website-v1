@@ -13,6 +13,7 @@ import { GreetingComponent } from './components/greeting/greeting.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {NavigationService} from "./services/navigation.service";
+import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {NavigationService} from "./services/navigation.service";
     FooterComponent,
     FeaturedWorkComponent,
     GreetingComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    SkillBarComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule

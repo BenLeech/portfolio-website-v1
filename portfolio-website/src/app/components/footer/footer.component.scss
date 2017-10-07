@@ -13,6 +13,10 @@
   margin-bottom: 20px;
 }
 
+.social-media-container i:hover{
+  color: $active-color;
+}
+
 .copyright-info{
   font-size: 12px;
   color: $off-white;
