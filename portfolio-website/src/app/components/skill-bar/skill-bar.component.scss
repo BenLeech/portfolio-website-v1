@@ -1,0 +1,14 @@
+@import "../../../assets/variables";
+
+.skill-bar-wrapper{
+  height: 25px;
+  border-radius: 25px;
+  background-color: $faded-text-color;
+  width: 350px;
+  overflow: hidden;
+}
+
+.skill-bar-inner{
+  height: 100%;
+  background-color: $active-color;
+}
