@@ -10,7 +10,7 @@ import {Observable} from "rxjs";
 export class AboutMeComponent implements OnInit {
 
   enjoyWords: Array<string> = ["trying new food.", "playing indie games.", "functional programming.",
-  "petting dogs.", "new technologies.", "space travel.", "playing saxophone.", "rewatching the Office."];
+  "petting dogs.", "new technologies.", "alternative music.", "playing saxophone.", "rewatching the Office."];
   currentEnjoyWord: string = this.enjoyWords[0];
 
   constructor(private navigationService: NavigationService) { }

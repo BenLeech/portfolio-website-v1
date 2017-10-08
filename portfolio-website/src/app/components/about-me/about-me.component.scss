@@ -52,17 +52,55 @@
 
 .skills-container{
   width: 100%;
-  //display: flex;
   background-color: $primary-color;
-  padding: 50px;
-  //justify-content: center;
-  flex-wrap: wrap;
   color: $off-white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 25px;
+}
+
+.skills-body h2{
+  margin-bottom: 5px;
+}
+
+.skills-body h5{
+  margin-top: 0;
+}
+
+.skills-body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+}
+
+.skills-body > div{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.skills-container span{
+  border: 1px solid $off-white;
+  padding: 5px;
+  margin: 5px;
+}
+
+.divider{
+  background-color: $active-color;
+  height: 2px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .footer-container{
   width: 100%;
   background-color: $primary-color;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 800px) {
