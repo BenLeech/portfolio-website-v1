@@ -42,7 +42,7 @@
 .dropdown-inner{
   color: $primary-text-color;
   width: 100%;
-  background-color: $primary-color;
+  background-color: $highlight-color;
 }
 
 .dropdown-end{
@@ -55,7 +55,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: linear-gradient(to right bottom, $primary-color 48%, transparent 50%);
+  background: linear-gradient(to right bottom, $highlight-color 48%, transparent 50%);
 }
 
 .dropdown-container-down{
@@ -83,7 +83,7 @@
 }
 
 .sticky-nav{
-  background-color: $primary-color;
+  background-color: $highlight-color;
 }
 
 .sticky-nav .nav-link:hover{
@@ -92,7 +92,7 @@
 
 @media (max-width: 780px){
   .navbar{
-    background-color: $primary-color;
+    background-color: $highlight-color;
   }
 
   .nav-link{
