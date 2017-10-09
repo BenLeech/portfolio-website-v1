@@ -23,17 +23,38 @@ export class AboutMeComponent implements OnInit {
     let counter: number = 0;
     let i: number = 0;
     let backspace: boolean = false;
+    let pauseTyping: boolean = false;
+    let cursorCounter: number = 0;
+    let cursorExists: boolean = false;
 
     Observable.interval(150).subscribe(() => {
-      if(counter >= this.enjoyWords.length)
+      if(counter >= this.enjoyWords.length) //reset to first word
         counter = 0;
 
-      if(i >= this.enjoyWords[counter].length){
+      if(i >= this.enjoyWords[counter].length){ //reached end of word
         i = 0;
+        pauseTyping = true;
         backspace = true;
       }
 
-      if(backspace){
+      if(pauseTyping == true){
+        cursorCounter++;
+
+        if(cursorCounter % 4 === 0){
+          if(cursorExists){
+            this.displayWord = this.displayWord.slice(0,this.displayWord.length-1);
+            cursorExists = false;
+          }else {
+            this.displayWord += "|";
+            cursorExists = true;
+          }
+        }
+
+        if(cursorCounter >= 16){
+          cursorCounter = 0;
+          pauseTyping = false;
+        }
+      }else if(backspace == true && pauseTyping == false){
         if(this.displayWord.length > 0){
           this.displayWord = this.displayWord.slice(0,this.displayWord.length-1);
         }else{
