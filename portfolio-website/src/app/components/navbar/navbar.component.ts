@@ -11,6 +11,9 @@ import {NavigationService} from "../../services/navigation.service";
 
 export class NavbarComponent implements OnInit {
 
+  //FIXME: Use subscription with Observable.fromEvent for scroll
+  //FIXME: make an onDestroy unsubscribe
+
   showDropdown: boolean = false;
   showNav: boolean = false;
 

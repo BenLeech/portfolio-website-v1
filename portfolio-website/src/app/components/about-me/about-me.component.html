@@ -66,7 +66,7 @@
   </div>
   <div class="experience-container">
     <h1>Experience</h1>
-    <div class="job-container">
+    <div class="job-container" (whenInView)="triggerFadeIn()" [@elementState]="state">
       <img src="assets/img/fcc_logo.jpg">
       <div class="job-description">
         <div class="job-header">
@@ -90,7 +90,7 @@
 
   <div class="education-container">
     <h1>Education</h1>
-    <div class="education-node-container">
+    <div class="education-node-container" (whenInView)="triggerFadeIn()" [@elementState]="state">
       <img src="assets/img/university_of_saskatchewan_logo.svg">
       <div class="education-description">
         <div class="education-header">

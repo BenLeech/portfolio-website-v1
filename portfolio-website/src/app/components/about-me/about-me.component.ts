@@ -1,18 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import {NavigationService} from "../../services/navigation.service";
 import {Observable} from "rxjs";
+import {trigger, state, style, animate, transition} from '@angular/animations';
 
 @Component({
   selector: 'about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss']
+  styleUrls: ['./about-me.component.scss'],
+  animations: [
+    trigger('elementState', [
+      state('inactive', style({
+        opacity: 0,
+        transform: 'translateY(50px)'
+
+      })),
+      state('visible',   style({
+        opacity: 1,
+        transform: 'translateY(0)'
+      })),
+      transition('* => visible', animate('500ms ease-out'))
+    ])
+  ]
 })
 export class AboutMeComponent implements OnInit {
 
   enjoyWords: Array<string> = ["trying new food.", "playing indie games.", "functional programming.",
   "petting dogs.", "new technologies.", "alternative music.", "playing saxophone.", "rewatching the Office."];
-  currentEnjoyWord: string = this.enjoyWords[0];
   displayWord: string = "";
+
+  state: string = 'inactive';
 
   constructor(private navigationService: NavigationService) { }
 
@@ -68,6 +84,10 @@ export class AboutMeComponent implements OnInit {
       }
 
     });
+  }
+
+  triggerFadeIn(){
+    this.state = 'visible';
   }
 
 }

@@ -1,14 +1,26 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {trigger, state, style, animate, transition} from '@angular/animations';
 
 @Component({
   selector: 'skill-bar',
   templateUrl: './skill-bar.component.html',
-  styleUrls: ['./skill-bar.component.scss']
+  styleUrls: ['./skill-bar.component.scss'],
+  animations: [
+    trigger('skillBarState', [
+      state('inactive', style({
+        width: '0'
+      })),
+      state('visible',   style('*')),
+      transition('inactive => visible', animate('1000ms ease-out'))
+    ])
+  ]
 })
 export class SkillBarComponent implements OnInit {
 
   @Input() skillName: string = "";
   @Input() skillPercent: number = 0;
+
+  state: string = 'inactive';
 
   constructor() { }
 
@@ -21,6 +33,10 @@ export class SkillBarComponent implements OnInit {
 
   getSkillPercent(): string{
     return this.skillPercent + "%";
+  }
+
+  triggerAnimation(){
+    this.state = 'visible';
   }
 
 }

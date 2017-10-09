@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SplashComponent } from './components/splash/splash.component';
@@ -14,6 +15,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {NavigationService} from "./services/navigation.service";
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
+import { WhenInViewDirective } from './directives/when-in-view.directive';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,11 @@ import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
     FeaturedWorkComponent,
     GreetingComponent,
     AboutMeComponent,
-    SkillBarComponent
+    SkillBarComponent,
+    WhenInViewDirective
   ],
   imports: [
-    BrowserModule, AppRoutingModule
+    BrowserModule, AppRoutingModule, BrowserAnimationsModule
   ],
   providers: [PortfolioService, NavigationService],
   bootstrap: [AppComponent]
