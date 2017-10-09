@@ -12,6 +12,7 @@ export class AboutMeComponent implements OnInit {
   enjoyWords: Array<string> = ["trying new food.", "playing indie games.", "functional programming.",
   "petting dogs.", "new technologies.", "alternative music.", "playing saxophone.", "rewatching the Office."];
   currentEnjoyWord: string = this.enjoyWords[0];
+  displayWord: string = "";
 
   constructor(private navigationService: NavigationService) { }
 
@@ -20,12 +21,31 @@ export class AboutMeComponent implements OnInit {
     this.navigationService.updateNavbarSubject.next(true);
 
     let counter: number = 0;
-    Observable.interval(3500).subscribe(x => {
+    let i: number = 0;
+    let backspace: boolean = false;
+
+    Observable.interval(150).subscribe(() => {
       if(counter >= this.enjoyWords.length)
         counter = 0;
 
-      this.currentEnjoyWord = this.enjoyWords[counter];
-      counter++;
+      if(i >= this.enjoyWords[counter].length){
+        i = 0;
+        backspace = true;
+      }
+
+      if(backspace){
+        if(this.displayWord.length > 0){
+          this.displayWord = this.displayWord.slice(0,this.displayWord.length-1);
+        }else{
+          backspace = false;
+          counter++;
+          this.displayWord = "";
+        }
+      }else{
+        this.displayWord += this.enjoyWords[counter].charAt(i);
+        i++;
+      }
+
     });
   }
 
