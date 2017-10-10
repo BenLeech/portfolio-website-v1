@@ -1,4 +1,4 @@
 {{skillName}}
 <div class="skill-bar-wrapper" (whenInView)="triggerAnimation()">
-  <div [style.width]="getSkillPercent()" [@skillBarState]="state" class="skill-bar-inner"></div>
+  <div [style.width]="getSkillPercent()" [@skillBarState]="{value: state, params: {'barWidth': skillWidth}}" class="skill-bar-inner"></div>
 </div>
