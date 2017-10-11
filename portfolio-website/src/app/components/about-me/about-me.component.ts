@@ -19,6 +19,18 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
         transform: 'translateY(0)'
       })),
       transition('* => visible', animate('500ms ease-out'))
+    ]),
+    trigger('educationState', [
+      state('inactive', style({
+        opacity: 0,
+        transform: 'translateY(50px)'
+
+      })),
+      state('visible',   style({
+        opacity: 1,
+        transform: 'translateY(0)'
+      })),
+      transition('* => visible', animate('500ms ease-out'))
     ])
   ]
 })
@@ -28,7 +40,8 @@ export class AboutMeComponent implements OnInit {
   "petting dogs.", "new technologies.", "alternative music.", "playing saxophone.", "rewatching the Office."];
   displayWord: string = "";
 
-  state: string = 'inactive';
+  state: string = 'inactive'; //FIXME: Make education and experience components
+  educationState: string = 'inactive';
 
   constructor(private navigationService: NavigationService) { }
 
@@ -43,7 +56,7 @@ export class AboutMeComponent implements OnInit {
     let cursorCounter: number = 0;
     let cursorExists: boolean = false;
 
-    Observable.interval(150).subscribe(() => {
+    Observable.interval(100).subscribe(() => {
       if(counter >= this.enjoyWords.length) //reset to first word
         counter = 0;
 
@@ -56,7 +69,7 @@ export class AboutMeComponent implements OnInit {
       if(pauseTyping == true){
         cursorCounter++;
 
-        if(cursorCounter % 4 === 0){
+        if(cursorCounter % 5 === 0){
           if(cursorExists){
             this.displayWord = this.displayWord.slice(0,this.displayWord.length-1);
             cursorExists = false;
@@ -66,7 +79,7 @@ export class AboutMeComponent implements OnInit {
           }
         }
 
-        if(cursorCounter >= 16){
+        if(cursorCounter >= 20){
           cursorCounter = 0;
           pauseTyping = false;
         }
@@ -88,6 +101,10 @@ export class AboutMeComponent implements OnInit {
 
   triggerFadeIn(){
     this.state = 'visible';
+  }
+
+  triggerEducationFadeIn(){ //FIXME: Remove once education/experience are separated into components
+    this.educationState = 'visible';
   }
 
 }

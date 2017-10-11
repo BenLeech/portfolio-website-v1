@@ -6,8 +6,6 @@ import {Observable, Subscription} from "rxjs";
 })
 export class WhenInViewDirective implements OnDestroy, AfterViewInit{
 
-  //FIXME: Add subscription on window resize
-
   @Output() whenInView: EventEmitter<void> = new EventEmitter<void>();
 
   elementHeight: number;
@@ -15,11 +13,13 @@ export class WhenInViewDirective implements OnDestroy, AfterViewInit{
   windowHeight: number;
 
   scrollSubscription: Subscription;
+  resizeSubscription: Subscription;
 
   constructor(private elementRef: ElementRef) { }
 
   ngAfterViewInit(){
-    this.subscribe();
+    this.scrollSubscription = Observable.fromEvent(window, 'scroll').subscribe(() => this.updateInfo());
+    this.resizeSubscription = Observable.fromEvent(window, 'resize').subscribe(() => this.updateInfo());
   }
 
   ngOnDestroy(){
@@ -29,7 +29,6 @@ export class WhenInViewDirective implements OnDestroy, AfterViewInit{
   getDimensions(){
     this.elementHeight = this.elementRef.nativeElement.offsetHeight;
     this.offsetTop = this.elementRef.nativeElement.offsetTop;
-
   }
 
   getWindowHeight(){
@@ -43,16 +42,15 @@ export class WhenInViewDirective implements OnDestroy, AfterViewInit{
     }
   }
 
-  subscribe(){
-    this.scrollSubscription = Observable.fromEvent(window, 'scroll').subscribe(() =>{
-      this.getWindowHeight();
-      this.getDimensions();
-      this.checkVisibility();
-    });
+  updateInfo(){
+    this.getWindowHeight();
+    this.getDimensions();
+    this.checkVisibility();
   }
 
   unsubscribe(){
     this.scrollSubscription.unsubscribe();
+    this.resizeSubscription.unsubscribe();
   }
 
 }
