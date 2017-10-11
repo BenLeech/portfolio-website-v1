@@ -1,6 +1,5 @@
 import {Component, OnInit, HostListener} from '@angular/core';
 import {NavLink} from "../../model/Nav-Link";
-import {Router} from '@angular/router';
 import {NavigationService} from "../../services/navigation.service";
 
 @Component({
@@ -19,7 +18,7 @@ export class NavbarComponent implements OnInit {
 
   navLinks:Array<NavLink> = [];
 
-  constructor(private router: Router, private navigationService: NavigationService){}
+  constructor(private navigationService: NavigationService){}
 
   ngOnInit() {
     this.getNavLinks();
@@ -40,7 +39,7 @@ export class NavbarComponent implements OnInit {
 
   private getNavLinks(){
     let aboutLink: NavLink = {text: 'About', link: '/about'};
-    let portfolioLink: NavLink = {text: 'Portfolio', link: 'home'};
+    let portfolioLink: NavLink = {text: 'Portfolio', link: '/portfolio'};
 
     this.navLinks = [aboutLink,portfolioLink];
   }

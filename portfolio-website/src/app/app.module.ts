@@ -16,6 +16,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {NavigationService} from "./services/navigation.service";
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { WhenInViewDirective } from './directives/when-in-view.directive';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +29,11 @@ import { WhenInViewDirective } from './directives/when-in-view.directive';
     GreetingComponent,
     AboutMeComponent,
     SkillBarComponent,
-    WhenInViewDirective
+    WhenInViewDirective,
+    PortfolioComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule, BrowserAnimationsModule
+    BrowserModule, AppRoutingModule, BrowserAnimationsModule, RouterModule
   ],
   providers: [PortfolioService, NavigationService],
   bootstrap: [AppComponent]
