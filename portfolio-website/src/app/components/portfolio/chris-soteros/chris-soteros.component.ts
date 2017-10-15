@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavigationService} from "../../../services/navigation.service";
 
 @Component({
   selector: 'app-chris-soteros',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChrisSoterosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit() {
+    this.navigationService.setScrollPercentage(0);
+    this.navigationService.updateNavbarSubject.next(true);
   }
 
 }

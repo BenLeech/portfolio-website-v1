@@ -19,7 +19,8 @@
 }
 
 .fa{
-  padding-left: 5px;
+  //padding-left: 5px;
+  position: relative;
 }
 
 .fa-linkedin-square:hover{
@@ -35,21 +36,27 @@
 }
 
 .fa-linkedin-square:hover:before {
-  background-color: #fff;
-  border-radius: 20%;
-  line-height: 20px;
-  width: 20px;
-  height: 20px;
-  margin-right: 2px;
-  display: inline-block;
+  content: "\f0c8";
+  font-size: 24px;
+  color: #fff;
+}
+
+.fa-linkedin-square:hover:after{
+  left: -1px;
+  top: 1px;
+  position: absolute;
+  content: "\f08c";
 }
 
 .fa-github:hover:before{
-  background-color: #fff;
-  border-radius: 80%;
-  line-height: 20px;
-  width: 20px;
-  height: 20px;
-  margin-right: 2px;
-  display: inline-block;
+  content: "\f111";
+  font-size: 24px;
+  color: #fff;
+}
+
+.fa-github:hover:after{
+  left: -1px;
+  top: 0;
+  position: absolute;
+  content: "\f09b";
 }
