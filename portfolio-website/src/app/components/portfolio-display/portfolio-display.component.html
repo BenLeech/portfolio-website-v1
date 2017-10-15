@@ -1,4 +1,4 @@
-<div class="portfolio-display-wrapper" (whenInView)="triggerFadeIn()" [@elementState]="state">
+<div class="portfolio-display-wrapper" (click)="goToLink()" (whenInView)="triggerFadeIn()" [@elementState]="state">
   <div class="display-image">
     <img src={{element.imagePath}} />
   </div>

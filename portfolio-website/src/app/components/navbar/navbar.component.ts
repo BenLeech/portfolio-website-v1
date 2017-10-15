@@ -38,8 +38,8 @@ export class NavbarComponent implements OnInit {
   }
 
   private getNavLinks(){
-    let aboutLink: NavLink = {text: 'About', link: '/about'};
-    let portfolioLink: NavLink = {text: 'Portfolio', link: '/portfolio'};
+    let aboutLink: NavLink = {text: 'ABOUT', link: '/about'};
+    let portfolioLink: NavLink = {text: 'PORTFOLIO', link: '/portfolio'};
 
     this.navLinks = [aboutLink,portfolioLink];
   }

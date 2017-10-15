@@ -8,7 +8,7 @@ export class PortfolioService {
 
   private helloWorldProject: PortfolioElement =
     {title: "University Professor Profile website", imagePath:basePath+"helloWorldProjectCover.png",
-      tags: ['HTML', 'CSS', 'Version Control', 'Javascript', 'jQuery']};
+      tags: ['Web Development'], linkPath: '/uni-prof-portfolio'};
   private testElement: PortfolioElement =
     {title: "Test", imagePath:basePath+"test.JPG", tags: ['test, PC: Kathryn Cullen']};
 

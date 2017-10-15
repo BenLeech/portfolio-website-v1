@@ -1,7 +1,7 @@
 <div class="navbar-wrapper">
   <div class="navbar" [ngClass]="{'sticky-nav': showNav, 'top-nav': !showNav}">
     <div class="logo-container" routerLink='/home'>
-      Ben Leech
+      BEN LEECH
     </div>
     <div class="nav-links-container">
       <span class="nav-link" *ngFor="let navLink of navLinks" [routerLink]='navLink.link'>{{navLink.text}}</span>

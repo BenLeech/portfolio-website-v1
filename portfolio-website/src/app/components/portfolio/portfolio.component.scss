@@ -1,0 +1,21 @@
+@import "../../../assets/variables";
+
+.portfolio-page-container{
+  width: 100%;
+  min-height: 100%;
+  background-color: $off-white;
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+
+.portfolio-element-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container{
+  width: 100%;
+  padding-bottom: 10px;
+  background-color: $primary-color;
+}

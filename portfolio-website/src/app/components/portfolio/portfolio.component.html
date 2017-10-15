@@ -1,3 +1,8 @@
-<p>
-  portfolio works!
-</p>
+<div class="portfolio-page-container">
+  <div class="portfolio-element-container">
+    <portfolio-display *ngFor="let work of myWork" [element]="work"></portfolio-display>
+  </div>
+  <div class="footer-container">
+    <footer></footer>
+  </div>
+</div>

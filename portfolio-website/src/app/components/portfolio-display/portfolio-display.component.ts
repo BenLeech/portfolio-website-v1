@@ -1,6 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {PortfolioElement} from "../../model/Portfolio-Element";
 import {trigger, state, style, animate, transition} from '@angular/animations';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'portfolio-display',
@@ -27,13 +28,17 @@ export class PortfolioDisplayComponent implements OnInit {
 
   state: string = 'inactive';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   triggerFadeIn(){
     this.state = 'visible';
+  }
+
+  goToLink(){
+    if(this.element.linkPath) this.router.navigate([this.element.linkPath]);
   }
 
 }

@@ -16,18 +16,23 @@
 
 .greeting-message{
   max-width: 70%;
-  text-align: justify;
-  text-justify: inter-word;
+  color: $faded-text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.greeting-message h3{
+.greeting-message h2{
   color: $active-color;
+  margin-bottom: 0;
 }
 
 .greeting-container{
   overflow: hidden;
   height: 100%;
   max-width: 840px;
+  //display: flex;
+  //align-items: center;
 }
 
 

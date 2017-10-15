@@ -13,10 +13,6 @@
   margin-bottom: 20px;
 }
 
-.social-media-container i:hover{
-  color: $off-white;
-}
-
 .copyright-info{
   font-size: 12px;
   color: $off-white;
@@ -24,4 +20,36 @@
 
 .fa{
   padding-left: 5px;
+}
+
+.fa-linkedin-square:hover{
+  color: #24559c;
+}
+
+.fa-github:hover{
+  color: #000;
+}
+
+.fa-instagram:hover{
+  color: #bd286d;
+}
+
+.fa-linkedin-square:hover:before {
+  background-color: #fff;
+  border-radius: 20%;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+  display: inline-block;
+}
+
+.fa-github:hover:before{
+  background-color: #fff;
+  border-radius: 80%;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+  display: inline-block;
 }

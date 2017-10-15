@@ -1,10 +1,10 @@
-import {Directive, Output, EventEmitter, OnDestroy, ElementRef, AfterViewInit} from '@angular/core';
+import {Directive, Output, EventEmitter, OnDestroy, ElementRef, OnInit} from '@angular/core';
 import {Observable, Subscription} from "rxjs";
 
 @Directive({
   selector: '[whenInView]'
 })
-export class WhenInViewDirective implements OnDestroy, AfterViewInit{
+export class WhenInViewDirective implements OnDestroy, OnInit{
 
   @Output() whenInView: EventEmitter<void> = new EventEmitter<void>();
 
@@ -17,7 +17,8 @@ export class WhenInViewDirective implements OnDestroy, AfterViewInit{
 
   constructor(private elementRef: ElementRef) { }
 
-  ngAfterViewInit(){
+  ngOnInit(){
+    this.updateInfo();
     this.scrollSubscription = Observable.fromEvent(window, 'scroll').subscribe(() => this.updateInfo());
     this.resizeSubscription = Observable.fromEvent(window, 'resize').subscribe(() => this.updateInfo());
   }
@@ -49,8 +50,8 @@ export class WhenInViewDirective implements OnDestroy, AfterViewInit{
   }
 
   unsubscribe(){
-    this.scrollSubscription.unsubscribe();
-    this.resizeSubscription.unsubscribe();
+    if(this.scrollSubscription) this.scrollSubscription.unsubscribe();
+    if(this.resizeSubscription) this.resizeSubscription.unsubscribe();
   }
 
 }
