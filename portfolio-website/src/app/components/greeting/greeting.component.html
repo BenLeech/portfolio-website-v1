@@ -1,4 +1,4 @@
-<div class="greeting-container">
+<div class="greeting-container" (whenInView)="triggerFadeIn()" [@elementState]="state">
   <div class="personal-image">
     <img src="/assets/img/personal-image.jpg">
   </div>

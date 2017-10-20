@@ -5,6 +5,7 @@
   top: 0;
   width: 100%;
   z-index: 10;
+  font-size: 15px;
 }
 
 .navbar {
@@ -59,7 +60,7 @@
 }
 
 .dropdown-container-down{
-  max-height: 600px;
+  max-height: 1000px;
   transition: max-height 0.25s linear;
 }
 

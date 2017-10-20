@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.featured-work-container h2{
+.featured-work-container h1{
   color: $active-color;
 }
 
@@ -27,6 +27,12 @@
   border: solid 2px $active-color;
   padding: 10px 15px 10px 15px;
   background-color: transparent;
+  animation: btn-unhover 0.2s;
+}
+
+.btn-view-more:hover{
+  animation: btn-hover 0.5s;
+  animation-fill-mode:forwards;
 }
 
 .divider{
@@ -34,4 +40,31 @@
   height: 2px;
   width: 25%;
   margin-bottom: 15px;
+}
+
+@keyframes btn-hover {
+  0% {
+    background-color: transparent;
+    color: $active-color;
+  }
+
+  100% {
+    background-color: $active-color;
+    color: $off-white;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes btn-unhover {
+  0%{
+    background-color: $active-color;
+    color: $off-white;
+    transform: scale(1.1);
+  }
+
+  100%{
+    background-color: transparent;
+    color: $active-color;
+    transform: scale(1);
+  }
 }

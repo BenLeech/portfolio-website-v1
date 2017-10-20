@@ -35,3 +35,29 @@
   padding-bottom: 10px;
   background-color: $primary-color;
 }
+
+.project-body{
+  display: flex;
+}
+
+.technologies-container h3{
+  color: $active-color;
+}
+
+.technologies-container ul{
+  list-style: none;
+  padding: 0;
+}
+
+.technologies-container li{
+  background-color: $primary-color;
+  color: $primary-text-color;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.technologies-container{
+  padding: 15px;
+}

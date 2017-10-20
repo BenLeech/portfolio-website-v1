@@ -1,21 +1,19 @@
 @import "../../../assets/variables";
 
 .personal-image{
-  max-width: 100%;
-  float: right;
-  shape-outside: circle(50%);
-  height: 200px;
-  margin: 15px;
+  width: 175px;
+  height: 175px;
+  margin: 25px;
 }
 
 .personal-image img{
-  max-height: 100%;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
 }
 
 .greeting-message{
-  max-width: 70%;
+  max-width: 600px;
   color: $faded-text-color;
   display: flex;
   flex-direction: column;
@@ -25,14 +23,23 @@
 .greeting-message h2{
   color: $active-color;
   margin-bottom: 0;
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+.greeting-message h3{
+  text-align: center;
 }
 
 .greeting-container{
   overflow: hidden;
   height: 100%;
   max-width: 840px;
-  //display: flex;
-  //align-items: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row-reverse;
 }
 
 

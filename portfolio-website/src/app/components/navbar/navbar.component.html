@@ -12,7 +12,7 @@
        [ngClass]="{'dropdown-container-down': showDropdown, 'dropdown-container-up': !showDropdown}">
     <div class="dropdown-inner">
       <div class="nav-dropdown-link-row" *ngFor="let navLink of navLinks">
-        <span class="nav-dropdown-link" [routerLink]='navLink.link'>{{navLink.link}} </span>
+        <span class="nav-dropdown-link" [routerLink]='navLink.link'>{{navLink.text}} </span>
       </div>
     </div>
     <div class="dropdown-end">

@@ -57,19 +57,48 @@
   padding-bottom: 50px;
 }
 
-.separator-container{
-  height: 100px;
-  background-color: $off-white;
-  width: 100%;
-}
-
 .about-me-container{
   width: 100%;
-  background-color: #fff;
+  background-color: $off-white;
   padding: 50px 15px 50px 15px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+}
+
+.what-i-can-do-container{
+  width: 100%;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.expertise-bubble{
+  font-size: 36px;
+  color: $off-white;
+  background-color: $highlight-color;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expertise-container{
+  color: $off-white;
+  margin: 10px 25px 10px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+  max-width: 250px;
 }
 
 .down-arrow{
@@ -87,17 +116,65 @@
 .featured-container{
   background-color: $off-white;
   width: 100%;
-  padding: 15px;
+  padding: 35px 15px 35px 15px;
   box-sizing: border-box;
   padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
 }
 
+.contact-container{
+  width: 100%;
+  background-color: $highlight-color;
+  padding: 45px 25px 65px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $off-white;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contact-container h1{
+  font-size: 48px;
+}
+
+.contact-container .btn-email{
+  color: $highlight-color;
+  background-color: $active-color;
+  font-weight: bold;
+  border: 0;
+  font-size: 24px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.contact-container .btn-email:hover{
+  animation: contact-btn-hover 0.5s;
+  animation-fill-mode:forwards;
+}
+
+.contact-message{
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+
 .footer-container{
   background-color: $primary-color;
   color: $primary-text-color;
   padding: 10px;
+}
+
+@keyframes contact-btn-hover {
+  0%{
+    color: $highlight-color;
+  }
+
+  100%{
+    color: $off-white;
+    background-color: #6d424d;
+  }
 }
 
 @media (max-height: 400px){
