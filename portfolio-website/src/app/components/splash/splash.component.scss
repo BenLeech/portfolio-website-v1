@@ -101,6 +101,11 @@
   max-width: 250px;
 }
 
+.expertise-bubble .fa-pencil-square-o{
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
 .down-arrow{
   position: absolute;
   font-size: 20px;
@@ -147,7 +152,7 @@
   font-size: 24px;
   padding: 10px 15px 10px 15px;
   border-radius: 10px;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .contact-container .btn-email:hover{
@@ -167,14 +172,9 @@
 }
 
 @keyframes contact-btn-hover {
-  0%{
-    color: $highlight-color;
-  }
+  0%{  }
 
-  100%{
-    color: $off-white;
-    background-color: #6d424d;
-  }
+  100%{  background-color: #bf7386;  }
 }
 
 @media (max-height: 400px){

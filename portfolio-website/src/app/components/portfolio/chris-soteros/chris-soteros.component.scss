@@ -12,8 +12,14 @@
   flex-direction: column;
 }
 
-.main-picture-container{
+.page-inner{
   width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-picture-container{
+  width: 100%;
 }
 
 .main-picture-container img{
@@ -38,26 +44,26 @@
 
 .project-body{
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
 }
 
-.technologies-container h3{
+h3{
   color: $active-color;
 }
 
-.technologies-container ul{
-  list-style: none;
-  padding: 0;
-}
-
-.technologies-container li{
-  background-color: $primary-color;
-  color: $primary-text-color;
+.technologies-container span{
+  border: 1px solid $highlight-color;
+  color: $highlight-color;
   padding: 5px;
   margin-bottom: 5px;
   border-radius: 5px;
   font-size: 14px;
 }
 
-.technologies-container{
-  padding: 15px;
+@media (max-width: 780px){
+  .page-inner{
+    width: 100%;
+  }
 }

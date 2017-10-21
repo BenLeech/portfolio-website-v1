@@ -1,0 +1,28 @@
+|-finish chris soteros portfolio element page
+-finish recreating image for Miri
+-refactor skills section of about me page to wrap better
+-rework portfolio display component to look better
+-fix weird bug with fcc image
+-make navbar dropdown much larger on mobile
+-add back/forward and 'back to list' buttons on portfolio item pages
+-fix footer social media hovers
+-make a 'back to top' button in footer
+-change routes to use children routes for portfolio elements
+-transfer whenInView animations to css to see if that helps performance
+-use subscription with Observable.fromEvent for navbar scroll listeners
+-make sure all subscriptions have an unsubscribe
+-add subtle animations to everything
+-animate navbar
+-either make more components or less components - consistency
+-clean up css and make common classes
+-parallax scroll effects on splash
+-general mobile responsiveness cleanup
+-create logo and add it to navbar
+-create favicon based on logo
+-find new image for splash
+
+
+--------------------------------------------
+-create a filter for the portfolio page
+--------------------------------------------
+-possibly convert to single page portfolio
