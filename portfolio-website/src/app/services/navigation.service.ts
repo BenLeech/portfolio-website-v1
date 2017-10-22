@@ -11,6 +11,7 @@ export class NavigationService{
 
   setScrollPercentage(percentage: number){
     this.scrollPercentage = percentage;
+    this.updateNavbarSubject.next(true);
   }
 
   getScrollPercentage(){

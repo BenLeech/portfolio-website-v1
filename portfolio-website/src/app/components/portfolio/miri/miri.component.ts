@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {NavigationService} from "../../../services/navigation.service";
 
 @Component({
-  selector: 'chris-soteros',
-  templateUrl: './chris-soteros.component.html',
-  styleUrls: ['./chris-soteros.component.scss']
+  selector: 'miri',
+  templateUrl: './miri.component.html',
+  styleUrls: ['./miri.component.scss']
 })
-export class ChrisSoterosComponent implements OnInit {
+export class MiriComponent implements OnInit {
 
   constructor(private navigationService: NavigationService) { }
 

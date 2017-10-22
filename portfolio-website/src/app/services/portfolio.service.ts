@@ -12,7 +12,7 @@ export class PortfolioService {
   private testElement: PortfolioElement =
     {title: "Test", imagePath:basePath+"test.JPG", tags: ['test, PC: Kathryn Cullen']};
   private miri: PortfolioElement =
-    {title: "Miri", imagePath:basePath+"miri_mockup.jpg", tags: ['Game Development']};
+    {title: "Miri", imagePath:basePath+"miri_mockup.jpg", tags: ['Game Development'], linkPath: '/miri-game'};
 
   constructor() { }
 

@@ -18,6 +18,7 @@ import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { WhenInViewDirective } from './directives/when-in-view.directive';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ChrisSoterosComponent } from './components/portfolio/chris-soteros/chris-soteros.component';
+import { MiriComponent } from './components/portfolio/miri/miri.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ChrisSoterosComponent } from './components/portfolio/chris-soteros/chri
     WhenInViewDirective,
     PortfolioComponent,
     ChrisSoterosComponent,
+    MiriComponent,
   ],
   imports: [
     BrowserModule, AppRoutingModule, BrowserAnimationsModule, RouterModule

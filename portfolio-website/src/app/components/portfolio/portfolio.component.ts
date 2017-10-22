@@ -16,7 +16,6 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.navigationService.setScrollPercentage(0);
-    this.navigationService.updateNavbarSubject.next(true);
 
     this.myWork = this.portfolioService.getPortfolioWork();
   }

@@ -47,7 +47,6 @@ export class AboutMeComponent implements OnInit {
 
   ngOnInit() {
     this.navigationService.setScrollPercentage(0);
-    this.navigationService.updateNavbarSubject.next(true);
 
     let counter: number = 0;
     let i: number = 0;

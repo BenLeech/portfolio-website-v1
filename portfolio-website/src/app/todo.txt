@@ -1,6 +1,7 @@
 |-finish chris soteros portfolio element page
 |-finish recreating image for Miri
--add Miri to portfolio
+|-add Miri to portfolio
+|-finish Miri portfolio element page
 -refactor skills section of about me page to wrap better
 -fix text for back-end expertise
 -rework portfolio display component to look better
@@ -20,6 +21,7 @@
 -add subtle animations to everything
 -animate navbar
 -either make more components or less components - consistency
+-move footer to app component
 -clean up css and make common classes
 -parallax scroll effects on splash
 -general mobile responsiveness cleanup
@@ -29,6 +31,8 @@
 -use fontawesome pro SVGs instead of web font
 -create loading spinner until images are loaded
 -link code or demos to portfolio
+-rename components
+-create a common css file for portfolio element pages
 
 
 --------------------------------------------

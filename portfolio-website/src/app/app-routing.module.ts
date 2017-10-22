@@ -4,6 +4,7 @@ import {SplashComponent} from "./components/splash/splash.component";
 import {AboutMeComponent} from "./components/about-me/about-me.component";
 import {PortfolioComponent} from "./components/portfolio/portfolio.component";
 import {ChrisSoterosComponent} from "./components/portfolio/chris-soteros/chris-soteros.component";
+import {MiriComponent} from "./components/portfolio/miri/miri.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'uni-prof-portfolio', //FIXME: Make children paths of portfolio
     component: ChrisSoterosComponent
+  },
+  {
+    path: 'miri-game',
+    component: MiriComponent
   },
   {
     path: 'about',
