@@ -3,7 +3,7 @@
 |-add Miri to portfolio
 |-finish Miri portfolio element page
 |-refactor skills section of about me page to wrap better
--fix text for back-end expertise
+|-fix text for back-end expertise
 -rework portfolio display component to look better
 -fix weird bug with fcc image
 -change navbar link hover effect
@@ -13,6 +13,8 @@
 -link social media icons to social media
 -link email button to send an email
 -make a 'back to top' button in footer
+-attach resume and link it to view resume button
+-make view resume look better
 -change routes to use children routes for portfolio elements
 -add Tobii eyeX research to portfolio
 -transfer whenInView animations to css to see if that helps performance
