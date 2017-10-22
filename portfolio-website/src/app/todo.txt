@@ -1,13 +1,19 @@
 |-finish chris soteros portfolio element page
--finish recreating image for Miri
+|-finish recreating image for Miri
+-add Miri to portfolio
 -refactor skills section of about me page to wrap better
+-fix text for back-end expertise
 -rework portfolio display component to look better
 -fix weird bug with fcc image
+-change navbar link hover effect
 -make navbar dropdown much larger on mobile
 -add back/forward and 'back to list' buttons on portfolio item pages
 -fix footer social media hovers
+-link social media icons to social media
+-link email button to send an email
 -make a 'back to top' button in footer
 -change routes to use children routes for portfolio elements
+-add Tobii eyeX research to portfolio
 -transfer whenInView animations to css to see if that helps performance
 -use subscription with Observable.fromEvent for navbar scroll listeners
 -make sure all subscriptions have an unsubscribe
@@ -20,6 +26,9 @@
 -create logo and add it to navbar
 -create favicon based on logo
 -find new image for splash
+-use fontawesome pro SVGs instead of web font
+-create loading spinner until images are loaded
+-link code or demos to portfolio
 
 
 --------------------------------------------

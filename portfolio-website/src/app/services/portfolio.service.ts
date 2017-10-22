@@ -11,15 +11,17 @@ export class PortfolioService {
       tags: ['Web Development'], linkPath: '/uni-prof-portfolio'};
   private testElement: PortfolioElement =
     {title: "Test", imagePath:basePath+"test.JPG", tags: ['test, PC: Kathryn Cullen']};
+  private miri: PortfolioElement =
+    {title: "Miri", imagePath:basePath+"miri_mockup.jpg", tags: ['Game Development']};
 
   constructor() { }
 
   getFeaturedPortfolioWork(): Array<PortfolioElement>{
-    return [this.helloWorldProject, this.testElement];
+    return [this.helloWorldProject, this.testElement, this.miri];
   }
 
   getPortfolioWork(): Array<PortfolioElement>{
-    return [this.helloWorldProject];
+    return [this.helloWorldProject, this.miri];
   }
 
 }
