@@ -33,6 +33,8 @@
 -link code or demos to portfolio
 -rename components
 -create a common css file for portfolio element pages
+-clean up assets folder
+-clean up any unused code
 
 
 --------------------------------------------
