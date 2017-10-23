@@ -4,8 +4,8 @@
 |-finish Miri portfolio element page
 |-refactor skills section of about me page to wrap better
 |-fix text for back-end expertise
--rework portfolio display component to look better
--fix weird bug with fcc image
+|-rework portfolio display component to look better
+|-fix weird bug with fcc image
 -change navbar link hover effect
 -make navbar dropdown much larger on mobile
 -give clickable items a pointer cursor
