@@ -1,5 +1,9 @@
 <div class="portfolio-display-wrapper" (click)="goToLink()" (whenInView)="triggerFadeIn()" [@elementState]="state">
+
   <div class="display-image">
+    <div class="display-image-overlay">
+      <span>View Project</span>
+    </div>
     <img src={{element.imagePath}} />
   </div>
   <div class="display-text">

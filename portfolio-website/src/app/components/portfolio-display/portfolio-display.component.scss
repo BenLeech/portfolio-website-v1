@@ -20,6 +20,28 @@
   box-sizing: border-box;
 }
 
+.display-image-overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: $off-white;
+  background-color: rgba(25,34,49,0.5);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  transition: all 0.5s ease;
+}
+
+.display-image-overlay span{
+  padding: 10px 15px 10px 15px;
+  background-color: $highlight-color;
+}
+
 .portfolio-display-wrapper .display-image img{
   width: 100%;
   object-fit: cover;
@@ -29,14 +51,19 @@
 }
 
 .portfolio-display-wrapper:hover img{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
+.portfolio-display-wrapper:hover .display-image-overlay{
+  opacity: 1;
+}
 
 .display-image{
   overflow: hidden;
   display: flex;
   flex: 1;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .display-text{
