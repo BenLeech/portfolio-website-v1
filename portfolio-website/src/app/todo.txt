@@ -6,7 +6,7 @@
 |-fix text for back-end expertise
 |-rework portfolio display component to look better
 |-fix weird bug with fcc image
--change navbar link hover effect
+|-change navbar link hover effect
 -make navbar dropdown much larger on mobile
 -give clickable items a pointer cursor
 -scroll to top on route change
