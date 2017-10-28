@@ -8,6 +8,7 @@
 |-fix weird bug with fcc image
 |-change navbar link hover effect
 -make navbar dropdown much larger on mobile
+-fix navbar animation
 -give clickable items a pointer cursor
 -scroll to top on route change
 -add back/forward and 'back to list' buttons on portfolio item pages
@@ -17,6 +18,7 @@
 -make a 'back to top' button in footer
 -attach resume and link it to view resume button
 -make view resume look better
+-add window resize subscribe to close navbar dropdown
 -change routes to use children routes for portfolio elements
 -highlight the nav link for the current page
 -add Tobii eyeX research to portfolio
@@ -38,6 +40,7 @@
 -link code or demos to portfolio
 -rename components
 -create a common css file for portfolio element pages
+-fix scroll lag
 -clean up assets folder
 -browser support
 -clean up any unused code
