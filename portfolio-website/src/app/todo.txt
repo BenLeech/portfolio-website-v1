@@ -11,7 +11,7 @@
 |-fix navbar animation
 |-give clickable items a pointer cursor
 |-scroll to top on route change
--close navbar dropdown on route change
+|-close navbar dropdown on route change
 -add social media links to navbar dropdown
 -add some padding to about me page
 -add back/forward and 'back to list' buttons on portfolio item pages
@@ -32,6 +32,7 @@
 -animate navbar
 -either make more components or less components - consistency
 -move footer to app component
+-close navbar dropdown menu when resizing window larger (instead of just hiding it)
 -clean up css and make common classes
 -parallax scroll effects on splash
 -general mobile responsiveness cleanup
@@ -43,9 +44,10 @@
 -link code or demos to portfolio
 -rename components
 -create a common css file for portfolio element pages
--fix scroll lag
+-fix scroll lag (caused by object-fit: cover)
 -clean up assets folder
 -browser support
+-fix any remaining TODOs
 -clean up any unused code
 
 
