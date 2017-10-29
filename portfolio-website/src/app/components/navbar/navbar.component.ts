@@ -2,6 +2,7 @@ import {Component, OnInit, HostListener} from '@angular/core';
 import {NavLink} from "../../model/Nav-Link";
 import {NavigationService} from "../../services/navigation.service";
 import {trigger, state, style, animate, transition} from '@angular/animations';
+import {Router, NavigationEnd} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -30,12 +31,19 @@ export class NavbarComponent implements OnInit {
 
   navLinks:Array<NavLink> = [];
 
-  constructor(private navigationService: NavigationService){}
+  constructor(private navigationService: NavigationService, private router: Router){}
 
   ngOnInit() {
     this.getNavLinks();
     this.navigationService.updateNavbarSubject.subscribe(value => {
       this.showNav = value;
+    });
+
+    this.router.events.subscribe(event => {
+      if(event instanceof NavigationEnd){
+        this.showDropdown = false;
+        this.state = 'inactive';
+      }
     });
   }
 

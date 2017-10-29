@@ -1,17 +1,17 @@
 <div class="navbar-wrapper" [@navBarState]="state">
   <div class="navbar" [ngClass]="{'sticky-nav': showNav, 'top-nav': !showNav, 'bg-transparent': showDropdown}">
-    <div class="logo-container" routerLink='/home'>
+    <div class="logo-container clickable" routerLink='/home'>
       BEN LEECH
     </div>
     <div class="nav-links-container">
-      <span class="nav-link" *ngFor="let navLink of navLinks" [routerLink]='navLink.link'>{{navLink.text}}</span>
+      <span class="nav-link clickable" *ngFor="let navLink of navLinks" [routerLink]='navLink.link'>{{navLink.text}}</span>
       <i class="fa fa-bars" aria-hidden="true" *ngIf="!showDropdown" (click)="toggleDropdown()"></i>
       <i class="fa fa-times" aria-hidden="true" *ngIf="showDropdown" (click)="toggleDropdown()"></i>
     </div>
   </div>
   <div class="dropdown-container">
     <div class="dropdown-inner" *ngIf="showDropdown">
-      <div class="nav-dropdown-link-row hvr-underline-from-center" *ngFor="let navLink of navLinks">
+      <div class="nav-dropdown-link-row clickable" *ngFor="let navLink of navLinks">
         <span class="nav-dropdown-link" [routerLink]='navLink.link'>{{navLink.text}} </span>
       </div>
     </div>
