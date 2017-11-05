@@ -16,18 +16,24 @@
       </div>
     </div>
     <div class="social-media-container">
-      <span class="fa-stack fa-lg clickable">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-linkedin-square fa-stack-1x"></i>
-      </span>
-      <span class="fa-stack fa-lg clickable">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x"></i>
-      </span>
-      <span class="fa-stack fa-lg clickable">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-instagram fa-stack-1x"></i>
-      </span>
+      <a [attr.href]="linkedinPath" target="_blank">
+        <span class="fa-stack fa-lg clickable">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-linkedin-square fa-stack-1x"></i>
+        </span>
+      </a>
+      <a [attr.href]="githubPath" target="_blank">
+        <span class="fa-stack fa-lg clickable">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-github fa-stack-1x"></i>
+        </span>
+      </a>
+      <a [attr.href]="instagramPath" target="_blank">
+        <span class="fa-stack fa-lg clickable">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-instagram fa-stack-1x"></i>
+        </span>
+      </a>
     </div>
   </div>
 </div>
