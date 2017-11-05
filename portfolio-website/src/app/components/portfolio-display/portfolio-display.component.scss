@@ -45,6 +45,7 @@
 .portfolio-display-wrapper .display-image img{
   width: 100%;
   object-fit: cover;
+  -webkit-transform: translate3d(0,0,0);
   display: flex;
   flex: 1;
   transition: transform 1s ease;

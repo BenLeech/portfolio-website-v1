@@ -21,6 +21,8 @@
   flex-wrap: wrap;
   color: $faded-text-color;
   margin-bottom: 50px;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .about-me-message{
