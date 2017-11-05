@@ -8,9 +8,17 @@
 }
 
 .social-media-container{
-  font-size: 26px;
-  color: $highlight-color;
+  font-size: 20px;
+  color: $primary-color;
   margin-bottom: 20px;
+}
+
+.social-media-container * {
+  transition: all 0.3s ease;
+}
+
+.fa-circle{
+  color: $highlight-color;
 }
 
 .copyright-info{
@@ -18,45 +26,26 @@
   color: $off-white;
 }
 
-.fa{
-  //padding-left: 5px;
-  position: relative;
-}
-
-.fa-linkedin-square:hover{
+.linkedin:hover .fa-circle{
   color: #24559c;
 }
 
-.fa-github:hover{
+.linkedin:hover .fa-linkedin-square{
+  color: $off-white;
+}
+
+.github:hover .fa-circle{
   color: #000;
 }
 
-.fa-instagram:hover{
+.github:hover .fa-github{
+  color: $off-white;
+}
+
+.instagram:hover .fa-circle{
   color: #bd286d;
 }
 
-.fa-linkedin-square:hover:before {
-  content: "\f0c8";
-  font-size: 24px;
-  color: #fff;
-}
-
-.fa-linkedin-square:hover:after{
-  left: -1px;
-  top: 1px;
-  position: absolute;
-  content: "\f08c";
-}
-
-.fa-github:hover:before{
-  content: "\f111";
-  font-size: 24px;
-  color: #fff;
-}
-
-.fa-github:hover:after{
-  left: -1px;
-  top: 0;
-  position: absolute;
-  content: "\f09b";
+.instagram:hover .fa-instagram{
+  color: $off-white;
 }
