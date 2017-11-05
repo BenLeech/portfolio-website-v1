@@ -24,7 +24,7 @@ export class WhenInViewDirective implements OnDestroy, OnInit{
   }
 
   ngOnDestroy(){
-    this.unsubscribe();
+    this.unsubscribeAll();
   }
 
   getDimensions(){
@@ -39,7 +39,7 @@ export class WhenInViewDirective implements OnDestroy, OnInit{
   checkVisibility(){
     if((window.scrollY + this.windowHeight) >= (this.offsetTop + (this.elementHeight/2))){
       this.whenInView.emit();
-      this.unsubscribe();
+      this.unsubscribeAll();
     }
   }
 
@@ -49,7 +49,7 @@ export class WhenInViewDirective implements OnDestroy, OnInit{
     this.checkVisibility();
   }
 
-  unsubscribe(){
+  unsubscribeAll(){
     if(this.scrollSubscription) this.scrollSubscription.unsubscribe();
     if(this.resizeSubscription) this.resizeSubscription.unsubscribe();
   }

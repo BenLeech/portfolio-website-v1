@@ -1,8 +1,9 @@
-import {Component, OnInit, HostListener} from '@angular/core';
+import {Component, OnInit, HostListener, OnDestroy} from '@angular/core';
 import {NavLink} from "../../model/Nav-Link";
 import {NavigationService} from "../../services/navigation.service";
 import {trigger, state, style, animate, transition} from '@angular/animations';
 import {Router, NavigationEnd} from "@angular/router";
+import {Subscription, Observable} from "rxjs";
 
 @Component({
   selector: 'app-navbar',
@@ -19,7 +20,7 @@ import {Router, NavigationEnd} from "@angular/router";
   ]
 })
 
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
 
   //FIXME: Use subscription with Observable.fromEvent for scroll
   //FIXME: make an onDestroy unsubscribe
@@ -30,6 +31,8 @@ export class NavbarComponent implements OnInit {
   state: string = 'inactive';
 
   navLinks:Array<NavLink> = [];
+
+  resizeSubscription: Subscription;
 
   linkedinPath: string = 'https://www.linkedin.com/in/ben-leech-4195b6126';
   githubPath: string = 'https://github.com/BenLeech';
@@ -49,6 +52,12 @@ export class NavbarComponent implements OnInit {
         this.state = 'inactive';
       }
     });
+
+    this.resizeSubscription = Observable.fromEvent(window, 'resize').subscribe(() => this.handleResizeEvent());
+  }
+
+  ngOnDestroy(){
+    this.resizeSubscription.unsubscribe();
   }
 
   toggleDropdown(){
@@ -60,6 +69,13 @@ export class NavbarComponent implements OnInit {
   handleScrollEvent(){
     this.showNav = (this.navigationService.getScrollPercentage() === 0) ? true :
       (window.pageYOffset > (window.innerHeight * this.navigationService.getScrollPercentage()));
+  }
+
+  handleResizeEvent(){
+    if(this.showDropdown && window.innerWidth > 780) {
+      this.showDropdown = false;
+      this.state = 'inactive';
+    }
   }
 
   private getNavLinks(){

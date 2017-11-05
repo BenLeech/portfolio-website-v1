@@ -20,8 +20,8 @@
 |-link email button to send an email
 |-make a 'back to top' button in footer
 |-attach resume and link it to view resume button
--make view resume look better
--add window resize subscribe to close navbar dropdown
+|-make view resume look better
+|-add window resize subscribe to close navbar dropdown
 -change routes to use children routes for portfolio elements
 -highlight the nav link for the current page
 -fix mobile wrapping on portfolio page
