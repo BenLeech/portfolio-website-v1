@@ -18,7 +18,7 @@
 |-fix footer social media hovers
 |-link social media icons to social media
 |-link email button to send an email
--make a 'back to top' button in footer
+|-make a 'back to top' button in footer
 -attach resume and link it to view resume button
 -make view resume look better
 -add window resize subscribe to close navbar dropdown

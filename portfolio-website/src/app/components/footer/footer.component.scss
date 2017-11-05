@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .social-media-container{
@@ -47,5 +48,29 @@
 }
 
 .instagram:hover .fa-instagram{
+  color: $off-white;
+}
+
+.btn-back-to-top{
+  position: absolute;
+  top: 10%;
+  right: 30px;
+  font-size: 26px;
+  color: $highlight-color;
+}
+
+.btn-back-to-top .fa-circle{
+  color: $primary-color;
+}
+
+.btn-back-to-top * {
+  transition: all 0.3s ease;
+}
+
+.btn-back-to-top:hover span{
+  transform: translateY(-5px);
+}
+
+.btn-back-to-top:hover .fa-circle{
   color: $off-white;
 }
