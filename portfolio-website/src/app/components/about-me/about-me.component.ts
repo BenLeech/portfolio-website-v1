@@ -36,8 +36,8 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
 })
 export class AboutMeComponent implements OnInit {
 
-  enjoyWords: Array<string> = ["trying new food.", "playing indie games.", "functional programming.",
-  "petting dogs.", "new technologies.", "alternative music.", "playing saxophone.", "rewatching the Office."];
+  enjoyWords: Array<string> = ["trying new foods.", "playing indie games.", "functional programming.",
+  "petting dogs.", "new technologies.", "alternative music.", "playing the saxophone.", "rewatching the Office."];
   displayWord: string = "";
 
   state: string = 'inactive'; //FIXME: Make education and experience components
