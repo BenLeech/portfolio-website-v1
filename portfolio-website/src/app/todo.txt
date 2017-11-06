@@ -25,7 +25,7 @@
 |-change routes to use children routes for portfolio elements
 |-close navbar dropdown menu when resizing window larger (instead of just hiding it)
 |-highlight the nav link for the current page
--fix mobile wrapping on portfolio page
+|-fix mobile wrapping on portfolio page
 -add Tobii eyeX research to portfolio
 -use subscription with Observable.fromEvent for navbar scroll listeners
 -add subtle animations to everything
