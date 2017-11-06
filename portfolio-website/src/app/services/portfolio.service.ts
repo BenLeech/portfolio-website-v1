@@ -9,9 +9,10 @@ export class PortfolioService {
 
   helloWorldProject: PortfolioElement =
     {title: "University Professor Profile website", imagePath:basePath+"helloWorldProjectCover.png",
-      tags: ['Web Development'], linkPath: '/uni-prof-portfolio'};
+      tags: ['Web Development'], linkPath: '/portfolio/uni-prof-portfolio'};
   miri: PortfolioElement =
-    {title: "Miri", imagePath:basePath+"miri_mockup.jpg", tags: ['Game Development'], linkPath: '/miri-game'};
+    {title: "Miri", imagePath:basePath+"miri_mockup.jpg",
+      tags: ['Game Development'], linkPath: '/portfolio/miri-game'};
 
   portfolioWork: Array<PortfolioElement> = [];
   featuredWork: Array<PortfolioElement> = [];

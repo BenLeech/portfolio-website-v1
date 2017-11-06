@@ -18,15 +18,20 @@ const routes: Routes = [
   },
   {
     path: 'portfolio',
-    component: PortfolioComponent
-  },
-  {
-    path: 'uni-prof-portfolio', //FIXME: Make children paths of portfolio
-    component: ChrisSoterosComponent
-  },
-  {
-    path: 'miri-game',
-    component: MiriComponent
+    children: [
+      {
+        path: '',
+        component: PortfolioComponent,
+      },
+      {
+        path: 'uni-prof-portfolio',
+        component: ChrisSoterosComponent
+      },
+      {
+        path: 'miri-game',
+        component: MiriComponent
+      },
+    ]
   },
   {
     path: 'about',

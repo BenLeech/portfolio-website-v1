@@ -22,7 +22,7 @@
 |-attach resume and link it to view resume button
 |-make view resume look better
 |-add window resize subscribe to close navbar dropdown
--change routes to use children routes for portfolio elements
+|-change routes to use children routes for portfolio elements
 -highlight the nav link for the current page
 -fix mobile wrapping on portfolio page
 -add Tobii eyeX research to portfolio
@@ -36,6 +36,7 @@
 -close navbar dropdown menu when resizing window larger (instead of just hiding it)
 -clean up css and make common classes
 -parallax scroll effects on splash
+-improve view resume animation
 -refactor portfolio service and components
 -general mobile responsiveness cleanup
 -create logo and add it to navbar
