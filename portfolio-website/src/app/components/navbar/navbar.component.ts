@@ -41,7 +41,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   constructor(private navigationService: NavigationService, private router: Router){}
 
   ngOnInit() {
-    this.getNavLinks();
+    this.navLinks = this.navigationService.getNavLinks();
+
     this.navigationService.updateNavbarSubject.subscribe(value => {
       this.showNav = value;
     });
@@ -76,13 +77,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
       this.showDropdown = false;
       this.state = 'inactive';
     }
-  }
-
-  private getNavLinks(){
-    let aboutLink: NavLink = {text: 'ABOUT', link: '/about'};
-    let portfolioLink: NavLink = {text: 'PORTFOLIO', link: '/portfolio'};
-
-    this.navLinks = [aboutLink,portfolioLink];
   }
 
 }

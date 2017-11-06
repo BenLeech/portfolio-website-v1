@@ -34,11 +34,10 @@
 }
 
 .nav-link{
-  padding: 0 15px 0 15px;
+  padding: 0 20px 0 20px;
   height: 100%;
   display: flex;
   align-items: center;
-  margin-left: 10px;
   transition: color 0.1s ease;
 }
 
@@ -135,6 +134,10 @@
   background-color: $primary-hover;
 }
 
+.active{
+  background-color: $primary-hover;
+}
+
 .social-media-container{
   color: #cecece;
   display: flex;
@@ -147,10 +150,6 @@
 
 .social-media-container span:hover .fa-circle{
   color: $active-color;
-}
-
-.fa-times:hover{
-  //color: $active-color;
 }
 
 .social-media-container .fa-circle{

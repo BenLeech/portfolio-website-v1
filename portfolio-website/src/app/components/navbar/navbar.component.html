@@ -4,7 +4,8 @@
       BEN LEECH
     </div>
     <div class="nav-links-container">
-      <span class="nav-link clickable" *ngFor="let navLink of navLinks" [routerLink]='navLink.link'>{{navLink.text}}</span>
+      <span class="nav-link clickable" *ngFor="let navLink of navLinks" [ngClass]="{'active': navLink.active}"
+            [routerLink]='navLink.link'>{{navLink.text}}</span>
       <i class="fa fa-bars clickable" aria-hidden="true" *ngIf="!showDropdown" (click)="toggleDropdown()"></i>
       <i class="fa fa-times clickable" aria-hidden="true" *ngIf="showDropdown" (click)="toggleDropdown()"></i>
     </div>
