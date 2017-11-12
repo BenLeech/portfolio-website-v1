@@ -10,7 +10,7 @@
   position: relative;
   background-image: url('../../../assets/img/cover-photo1.png');
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed;  //this line is causing lag
   background-position: center;
   -webkit-transform: translate3d(0,0,0);
 }
@@ -90,6 +90,14 @@
   align-items: center;
 }
 
+.expertise-bubble i{
+  transition: all 0.5s ease;
+}
+
+.expertise-bubble:hover i{
+  animation: 1s shake;
+}
+
 .expertise-container{
   color: $off-white;
   margin: 10px 25px 10px 25px;
@@ -146,10 +154,11 @@
 }
 
 .contact-container .btn-email{
-  color: $highlight-color;
-  background-color: $active-color;
+  color: $active-color;
+  background-color: $highlight-color;
+  border: 3px solid $active-color;
   font-weight: bold;
-  border: 0;
+  transition: all 0.5s ease;
   font-size: 24px;
   padding: 10px 15px 10px 15px;
   border-radius: 10px;
@@ -157,8 +166,8 @@
 }
 
 .contact-container .btn-email:hover{
-  animation: contact-btn-hover 0.5s;
-  animation-fill-mode:forwards;
+  background-color: $active-color;
+  color: $highlight-color;
 }
 
 .contact-message{
@@ -172,10 +181,11 @@
   padding: 10px;
 }
 
-@keyframes contact-btn-hover {
-  0%{  }
-
-  100%{  background-color: #bf7386;  }
+@keyframes shake {
+  0%{ transform: rotate(0deg) }
+  33%{ transform: rotate(-33deg) }
+  66%{ transform: rotate(33deg) }
+  100%{ transform: rotate(0deg) }
 }
 
 @media (max-height: 400px){

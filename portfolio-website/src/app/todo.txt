@@ -27,8 +27,8 @@
 |-highlight the nav link for the current page
 |-fix mobile wrapping on portfolio page
 |-add Tobii eyeX research to portfolio
--use subscription with Observable.fromEvent for navbar scroll listeners
--add subtle animations to everything
+|-use subscription with Observable.fromEvent for navbar scroll listeners
+|-add subtle animations to everything
 -animate navbar
 -clean up nav bar dropdown
 -either make more components or less components - consistency
