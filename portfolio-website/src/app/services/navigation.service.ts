@@ -38,8 +38,7 @@ export class NavigationService {
 
   detectActiveLink(){
     this.navLinks.forEach(link => {
-      link.active = (location.pathname.includes(link.link));
-      //console.log(link.active);
+      link.active = (location.pathname.endsWith(link.link));
     });
   }
 

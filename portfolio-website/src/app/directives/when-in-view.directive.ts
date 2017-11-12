@@ -37,7 +37,7 @@ export class WhenInViewDirective implements OnDestroy, OnInit{
   }
 
   checkVisibility(){
-    if((window.scrollY + this.windowHeight) >= (this.offsetTop + (this.elementHeight/2))){
+    if((window.scrollY + this.windowHeight) >= (this.offsetTop + (this.elementHeight/2.5))){
       this.whenInView.emit();
       this.unsubscribeAll();
     }

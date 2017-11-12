@@ -26,7 +26,7 @@
 |-close navbar dropdown menu when resizing window larger (instead of just hiding it)
 |-highlight the nav link for the current page
 |-fix mobile wrapping on portfolio page
--add Tobii eyeX research to portfolio
+|-add Tobii eyeX research to portfolio
 -use subscription with Observable.fromEvent for navbar scroll listeners
 -add subtle animations to everything
 -animate navbar
@@ -42,6 +42,7 @@
 -create logo and add it to navbar
 -create favicon based on logo
 -find new image for splash
+-remove unnecessary tests
 -use fontawesome pro SVGs instead of web font
 -create loading spinner until images are loaded
 -link code or demos to portfolio

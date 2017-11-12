@@ -1,0 +1,87 @@
+<div class="page-container">
+  <div class="btn-left clickable" (click)="onBackArrowClick()" *ngIf="displayLeftArrow">
+    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+  </div>
+  <div class="btn-right clickable" (click)="onNextArrowClick()" *ngIf="displayRightArrow">
+    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+  </div>
+
+  <div class="project-header">
+    <h2>Eye Tracking Research</h2>
+    <h4>Application Development, Research Project</h4>
+  </div>
+
+  <div class="page-inner">
+    <div class="main-picture-container">
+      <img src="assets/img/portfolio/tobii_eyex.JPG">
+    </div>
+
+    <div class="project-body">
+
+      <div class="description-container">
+        <h3>About</h3>
+        In preparation for a proposed Hackathon event with an eye tracking theme,
+        I was asked by a professor from the
+        University of Regina to do some research into different eye tracking technologies and
+        explore their capabilities.
+
+        <p>I looked into several tracking hardware, and a few application that just utilized a webcam, but I found
+        that the Tobii EyeX to be the best option in terms of performance, cost, and practicality for
+        such an event, so I did most of my development with Tobii's APIs and data streams.
+
+        <p>After playing around with the EyeX and seeing what it could do, I discovered that it was pretty
+      accurate at detecting where my eyes where looking on the screen, but it was very jittery and jumped around
+      the location that I was looking a lot. So I first created several smoothing filters that I applied over
+      the data stream. They affected responsiveness slightly, but they all greatly improved the smoothness of
+      the gaze point and improved user experience.</p>
+
+        <p>I then created an application in Unity that allowed the user to draw with their eyes. With the highest
+        smoothing filter applied, drawing was an enjoyable experience that did not put much strain on the eyes.</p>
+
+        <p>I took it another step an created a Windows form application that allowed to control the mouse cursor
+        with their eyes, change smooth filter settings, and click with the press of a keyboard button. This allowed
+        the user the potential to draw with their gaze in other applications, or just replace the mouse with their
+        eyes all-together.</p>
+
+        <p>Finally, I started looking into the possibility of gesture controls using head position, and
+        control using blinks or winks.</p>
+      </div>
+
+      <div class="technologies-container">
+        <h3>Technologies Used</h3>
+        <span>C#</span>
+        <span>C++</span>
+        <span>Unity</span>
+        <span>Tobii EyeX</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="button-container">
+    <div class="btn-mobile-prev clickable" (click)="onBackArrowClick()">
+      <span class="fa-stack fa-lg clickable" *ngIf="displayLeftArrow">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-chevron-left fa-stack-1x"></i>
+      </span>
+      <span class="mobile-title">{{prevTitle}}</span>
+    </div>
+    <div class="btn-mobile-menu clickable" [routerLink]="['/portfolio']">
+        <span class="fa-stack fa-lg clickable">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-th-large fa-stack-1x"></i>
+        </span>
+    </div>
+    <div class="btn-mobile-next clickable" (click)="onNextArrowClick()">
+      <span class="mobile-title">{{nextTitle}}</span>
+      <span class="fa-stack fa-lg" *ngIf="displayRightArrow">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-chevron-right fa-stack-1x"></i>
+        </span>
+    </div>
+  </div>
+
+</div>
+<div class="footer-container">
+  <footer></footer>
+</div>

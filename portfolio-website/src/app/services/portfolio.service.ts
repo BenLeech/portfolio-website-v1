@@ -13,6 +13,9 @@ export class PortfolioService {
   miri: PortfolioElement =
     {title: "Miri", imagePath:basePath+"miri_mockup.jpg",
       tags: ['Game Development'], linkPath: '/portfolio/miri-game'};
+  tobiiEyeX: PortfolioElement =
+    {title: "Eye Tracking Research", imagePath:basePath+"tobii_eyex.JPG",
+      tags: ['Application Development, Research'], linkPath: '/portfolio/eye-tracking-research'};
 
   portfolioWork: Array<PortfolioElement> = [];
   featuredWork: Array<PortfolioElement> = [];
@@ -20,8 +23,8 @@ export class PortfolioService {
   private currentPortfolioElement: PortfolioElement;
 
   constructor(private router: Router) {
-    this.portfolioWork = [this.helloWorldProject, this.miri];
-    this.featuredWork = [this.helloWorldProject, this.miri];
+    this.portfolioWork = [this.helloWorldProject, this.miri, this.tobiiEyeX];
+    this.featuredWork = [this.helloWorldProject, this.miri, this.tobiiEyeX];
   }
 
   getFeaturedPortfolioWork(): Array<PortfolioElement>{
