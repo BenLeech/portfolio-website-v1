@@ -1,4 +1,4 @@
-import {Component, OnInit, HostListener, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
 import {NavLink} from "../../model/Nav-Link";
 import {NavigationService} from "../../services/navigation.service";
 import {trigger, state, style, animate, transition} from '@angular/animations';
@@ -32,6 +32,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   navLinks:Array<NavLink> = [];
 
+  scrollSubscription: Subscription;
   resizeSubscription: Subscription;
 
   linkedinPath: string = 'https://www.linkedin.com/in/ben-leech-4195b6126';
@@ -54,11 +55,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
       }
     });
 
+    this.scrollSubscription = Observable.fromEvent(window, 'scroll').subscribe(() => this.handleScrollEvent());
     this.resizeSubscription = Observable.fromEvent(window, 'resize').subscribe(() => this.handleResizeEvent());
   }
 
   ngOnDestroy(){
     this.resizeSubscription.unsubscribe();
+    this.scrollSubscription.unsubscribe();
   }
 
   toggleDropdown(){
@@ -66,7 +69,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.state = (this.showDropdown) ? 'mobileMenu' : 'inactive';
   }
 
-  @HostListener('window:scroll', [])
   handleScrollEvent(){
     this.showNav = (this.navigationService.getScrollPercentage() === 0) ? true :
       (window.pageYOffset > (window.innerHeight * this.navigationService.getScrollPercentage()));
