@@ -29,8 +29,8 @@
 |-add Tobii eyeX research to portfolio
 |-use subscription with Observable.fromEvent for navbar scroll listeners
 |-add subtle animations to everything
+|-clean up nav bar dropdown
 -animate navbar
--clean up nav bar dropdown
 -either make more components or less components - consistency
 -move footer to app component
 -change body background color at the top of the page

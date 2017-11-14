@@ -10,12 +10,24 @@ import {Subscription, Observable} from "rxjs";
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   animations: [
-    trigger('navBarState', [
+    trigger('dropdownMenuState', [
       state('inactive', style({
         'height': '0'
       })),
       state('mobileMenu',   style({'height': '100%' })),
       transition('inactive <=> mobileMenu', [animate('200ms ease')]),
+    ]),
+    trigger('navBarState', [
+      state('top', style({
+        'background-color': 'rgba(25,34,49,0)',
+        'padding-top': '10px',
+        'padding-left': '50px',
+        'padding-right': '50px'
+      })),
+      state('stick', style({
+        'background-color': 'rgba(25,34,49,1)'
+      })),
+      transition('top <=> stick', [animate('400ms ease-out')]),
     ])
   ]
 })
@@ -29,6 +41,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   showNav: boolean = false;
 
   state: string = 'inactive';
+  navState: string = 'stick';
 
   navLinks:Array<NavLink> = [];
 
@@ -45,7 +58,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.navLinks = this.navigationService.getNavLinks();
 
     this.navigationService.updateNavbarSubject.subscribe(value => {
-      this.showNav = value;
+      //this.showNav = value;
+      this.navState = value ? 'stick' : 'top';
     });
 
     this.router.events.subscribe(event => {
@@ -72,6 +86,15 @@ export class NavbarComponent implements OnInit, OnDestroy {
   handleScrollEvent(){
     this.showNav = (this.navigationService.getScrollPercentage() === 0) ? true :
       (window.pageYOffset > (window.innerHeight * this.navigationService.getScrollPercentage()));
+
+    if(this.navigationService.getScrollPercentage() === 0){
+      this.navState = 'stick';
+    }else{
+      if(window.pageYOffset > (window.innerHeight * this.navigationService.getScrollPercentage()))
+        this.navState = 'stick';
+      else
+        this.navState = 'top';
+    }
   }
 
   handleResizeEvent(){

@@ -1,5 +1,5 @@
-<div class="navbar-wrapper" [@navBarState]="state">
-  <div class="navbar" [ngClass]="{'sticky-nav': showNav, 'top-nav': !showNav, 'bg-transparent': showDropdown}">
+<div class="navbar-wrapper" [@dropdownMenuState]="state">
+  <div class="navbar" [@navBarState]="navState" [ngClass]="{'sticky-nav': showNav, 'bg-transparent': showDropdown}">
     <div class="logo-container clickable" routerLink='/home'>
       BEN LEECH
     </div>
