@@ -30,7 +30,7 @@
 |-use subscription with Observable.fromEvent for navbar scroll listeners
 |-add subtle animations to everything
 |-clean up nav bar dropdown
--animate navbar
+|-animate navbar
 -either make more components or less components - consistency
 -move footer to app component
 -change body background color at the top of the page
@@ -43,6 +43,7 @@
 -create favicon based on logo
 -find new image for splash
 -remove unnecessary tests
+-make a whenInView queue structure for portfolio
 -use fontawesome pro SVGs instead of web font
 -create loading spinner until images are loaded
 -link code or demos to portfolio

@@ -6,7 +6,7 @@ import {Observable, Subscription} from "rxjs";
 })
 export class WhenInViewDirective implements OnDestroy, OnInit{
 
-  @Output() whenInView: EventEmitter<void> = new EventEmitter<void>();
+  @Output() whenInView: EventEmitter<ElementRef> = new EventEmitter<ElementRef>();
 
   elementHeight: number;
   offsetTop: number;
@@ -38,7 +38,7 @@ export class WhenInViewDirective implements OnDestroy, OnInit{
 
   checkVisibility(){
     if((window.scrollY + this.windowHeight) >= (this.offsetTop + (this.elementHeight/2.5))){
-      this.whenInView.emit();
+      this.whenInView.emit(this.elementRef);
       this.unsubscribeAll();
     }
   }

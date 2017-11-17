@@ -3,10 +3,10 @@ import {NavigationService} from "../../services/navigation.service";
 
 @Component({
   selector: 'app-splash',
-  templateUrl: './splash.component.html',
-  styleUrls: ['./splash.component.scss']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class SplashComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   constructor(private navigationService: NavigationService) { }
 

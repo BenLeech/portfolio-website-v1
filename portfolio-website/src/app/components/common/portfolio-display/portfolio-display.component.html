@@ -1,4 +1,4 @@
-<div class="portfolio-display-wrapper clickable" (click)="goToLink()" (whenInView)="triggerFadeIn()" [@elementState]="state">
+<div class="portfolio-display-wrapper clickable hidden-before-view" (click)="goToLink()" (whenInView)="triggerFadeIn($event)">
 
   <div class="display-image">
     <div class="display-image-overlay">

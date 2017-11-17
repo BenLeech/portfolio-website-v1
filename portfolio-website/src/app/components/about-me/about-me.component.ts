@@ -1,38 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ElementRef, Renderer2} from '@angular/core';
 import {NavigationService} from "../../services/navigation.service";
 import {Observable} from "rxjs";
-import {trigger, state, style, animate, transition} from '@angular/animations';
 
 @Component({
   selector: 'about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss'],
-  animations: [
-    trigger('elementState', [
-      state('inactive', style({
-        opacity: 0,
-        transform: 'translateY(50px)'
-
-      })),
-      state('visible',   style({
-        opacity: 1,
-        transform: 'translateY(0)'
-      })),
-      transition('* => visible', animate('500ms ease-out'))
-    ]),
-    trigger('educationState', [
-      state('inactive', style({
-        opacity: 0,
-        transform: 'translateY(50px)'
-
-      })),
-      state('visible',   style({
-        opacity: 1,
-        transform: 'translateY(0)'
-      })),
-      transition('* => visible', animate('500ms ease-out'))
-    ])
-  ]
+  styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent implements OnInit {
 
@@ -40,10 +13,7 @@ export class AboutMeComponent implements OnInit {
   "petting dogs.", "new technologies.", "alternative music.", "playing the saxophone.", "rewatching the Office."];
   displayWord: string = "";
 
-  state: string = 'inactive'; //FIXME: Make education and experience components
-  educationState: string = 'inactive';
-
-  constructor(private navigationService: NavigationService) { }
+  constructor(private navigationService: NavigationService, private renderer: Renderer2) { }
 
   ngOnInit() {
     this.navigationService.setScrollPercentage(0);
@@ -98,12 +68,8 @@ export class AboutMeComponent implements OnInit {
     });
   }
 
-  triggerFadeIn(){
-    this.state = 'visible';
-  }
-
-  triggerEducationFadeIn(){ //FIXME: Remove once education/experience are separated into components
-    this.educationState = 'visible';
+  triggerFadeIn(el: ElementRef){
+    this.renderer.addClass(el.nativeElement, 'enter-view');
   }
 
 }

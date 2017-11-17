@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PortfolioElement} from "../../model/Portfolio-Element";
-import {PortfolioService} from "../../services/portfolio.service";
+import {PortfolioElement} from "../../../model/Portfolio-Element";
+import {PortfolioService} from "../../../services/portfolio.service";
 
 @Component({
   selector: 'featured-work',

@@ -35,3 +35,25 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+.hidden-before-view{
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.enter-view{
+  animation: fade-into-view 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-into-view {
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
