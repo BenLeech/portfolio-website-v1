@@ -1,11 +1,13 @@
 @import "../../../assets/variables";
 
 .footer{
-  padding-top: 25px;
+  padding: 35px 15px 15px 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
   position: relative;
+  background-color: $primary-color;
+  color: $primary-text-color;
 }
 
 .social-media-container{
