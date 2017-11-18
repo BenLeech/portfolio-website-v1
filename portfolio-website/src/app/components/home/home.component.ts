@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ElementRef, Renderer2} from '@angular/core';
 import {NavigationService} from "../../services/navigation.service";
 
 @Component({
@@ -8,11 +8,15 @@ import {NavigationService} from "../../services/navigation.service";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private navigationService: NavigationService) { }
+  constructor(private navigationService: NavigationService, private renderer: Renderer2) { }
 
   ngOnInit() {
     this.navigationService.setScrollPercentage(0.75);
     this.navigationService.updateNavbarSubject.next(false);
+  }
+
+  triggerFadeIn(el: ElementRef){
+    this.renderer.addClass(el.nativeElement, 'enter-view');
   }
 
 }

@@ -31,7 +31,7 @@
 |-add subtle animations to everything
 |-clean up nav bar dropdown
 |-animate navbar
--either make more components or less components - consistency
+|-either make more components or less components - consistency
 -move footer to app component
 -change body background color at the top of the page
 -clean up css and make common classes

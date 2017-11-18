@@ -58,6 +58,7 @@
   padding-bottom: 50px;
 }
 
+//greeting
 .about-me-container{
   width: 100%;
   background-color: $off-white;
@@ -65,6 +66,48 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+}
+
+.personal-image{
+  width: 175px;
+  height: 175px;
+  margin: 25px;
+}
+
+.personal-image img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.greeting-message{
+  max-width: 600px;
+  color: $faded-text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greeting-message h2{
+  color: $active-color;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+.greeting-message h3{
+  text-align: center;
+}
+
+.greeting-container{
+  overflow: hidden;
+  height: 100%;
+  max-width: 840px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row-reverse;
 }
 
 .what-i-can-do-container{
