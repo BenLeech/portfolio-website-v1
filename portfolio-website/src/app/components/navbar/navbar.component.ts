@@ -40,13 +40,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
   showDropdown: boolean = false;
   showNav: boolean = false;
 
-  state: string = 'inactive';
-  navState: string = 'stick';
+  private state: string = 'inactive';
+  private navState: string = 'stick';
 
   navLinks:Array<NavLink> = [];
 
-  scrollSubscription: Subscription;
-  resizeSubscription: Subscription;
+  private scrollSubscription: Subscription;
+  private resizeSubscription: Subscription;
 
   linkedinPath: string = 'https://www.linkedin.com/in/ben-leech-4195b6126';
   githubPath: string = 'https://github.com/BenLeech';
@@ -86,6 +86,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   handleScrollEvent(){
     this.showNav = (this.navigationService.getScrollPercentage() === 0) ? true :
       (window.pageYOffset > (window.innerHeight * this.navigationService.getScrollPercentage()));
+
+    document.body.style.backgroundColor = (window.scrollY <= 0) ? '#192231' : '#494E6B';
 
     if(this.navigationService.getScrollPercentage() === 0){
       this.navState = 'stick';
