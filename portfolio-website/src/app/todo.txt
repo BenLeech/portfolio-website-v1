@@ -33,7 +33,7 @@
 |-animate navbar
 |-either make more components or less components - consistency
 |-move footer to app component
--change body background color at the top of the page
+|-change body background color at the top of the page
 -clean up css and make common classes
 -parallax scroll effects on splash
 -improve view resume animation

@@ -19,6 +19,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ChrisSoterosComponent } from './components/portfolio/chris-soteros/chris-soteros.component';
 import { MiriComponent } from './components/portfolio/miri/miri.component';
 import {TobiiEyeXComponent} from "./components/portfolio/tobii-eyex/tobii-eyex.component";
+import {FadeToTopDirective} from "./directives/fade-to-top.directive";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {TobiiEyeXComponent} from "./components/portfolio/tobii-eyex/tobii-eyex.c
     AboutMeComponent,
     SkillBarComponent,
     WhenInViewDirective,
+    FadeToTopDirective,
     PortfolioComponent,
     ChrisSoterosComponent,
     MiriComponent,
