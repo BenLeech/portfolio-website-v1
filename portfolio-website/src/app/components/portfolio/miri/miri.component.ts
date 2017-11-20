@@ -6,7 +6,7 @@ import {PortfolioService} from "../../../services/portfolio.service";
 @Component({
   selector: 'miri',
   templateUrl: './miri.component.html',
-  styleUrls: ['./miri.component.scss']
+  styleUrls: ['../portfolio-template.scss']
 })
 export class MiriComponent implements OnInit {
 

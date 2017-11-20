@@ -6,7 +6,7 @@ import {PortfolioElement} from "../../../model/Portfolio-Element";
 @Component({
   selector: 'chris-soteros',
   templateUrl: './chris-soteros.component.html',
-  styleUrls: ['./chris-soteros.component.scss']
+  styleUrls: ['../portfolio-template.scss']
 })
 export class ChrisSoterosComponent implements OnInit {
 

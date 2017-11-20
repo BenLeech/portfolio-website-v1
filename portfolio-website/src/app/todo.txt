@@ -34,10 +34,11 @@
 |-either make more components or less components - consistency
 |-move footer to app component
 |-change body background color at the top of the page
--clean up css and make common classes
+|-clean up css and make common classes
 -parallax scroll effects on splash
 -improve view resume animation
 -refactor portfolio service and components
+-fix mobile dropdown margin on splash screen
 -general mobile responsiveness cleanup
 -create logo and add it to navbar
 -create favicon based on logo
@@ -45,7 +46,8 @@
 -remove unnecessary tests
 -make a whenInView queue structure for portfolio
 -use fontawesome pro SVGs instead of web font
--create loading spinner until images are loaded
+//-create loading spinner until images are loaded//
+-find faster image loading techniques
 -link code or demos to portfolio
 -rename components
 -create a common css file for portfolio element pages
@@ -56,7 +58,6 @@
 -fix any remaining TODOs
 -clean up any unused code
 -create a filter for the portfolio page
-
 
 --------------------------------------------
 -possibly convert to single page portfolio

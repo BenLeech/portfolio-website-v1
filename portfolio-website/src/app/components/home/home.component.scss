@@ -1,5 +1,6 @@
 @import "../../../assets/variables";
 
+//Splash Page
 .splash-container{
   background-color: $primary-color;
   width: 100%;
@@ -58,7 +59,7 @@
   padding-bottom: 50px;
 }
 
-//greeting
+//Greeting
 .about-me-container{
   width: 100%;
   background-color: $off-white;
@@ -110,6 +111,19 @@
   flex-direction: row-reverse;
 }
 
+.down-arrow{
+  position: absolute;
+  font-size: 20px;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  color: $primary-text-color;
+  text-align: center;
+  -webkit-animation: fade-and-hover 2s infinite;
+  -webkit-animation-delay: 4s;
+}
+
+//Expertise Section
 .what-i-can-do-container{
   width: 100%;
   background-color: $primary-color;
@@ -158,28 +172,17 @@
   margin-top: 3px;
 }
 
-.down-arrow{
-  position: absolute;
-  font-size: 20px;
-  bottom: 15px;
-  left: 0;
-  width: 100%;
-  color: $primary-text-color;
-  text-align: center;
-  -webkit-animation: fade-and-hover 2s infinite;
-  -webkit-animation-delay: 4s;
-}
-
+//Featured Work Container
 .featured-container{
   background-color: $off-white;
   width: 100%;
   padding: 35px 15px 35px 15px;
   box-sizing: border-box;
-  padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
 }
 
+//Contact/Email me
 .contact-container{
   width: 100%;
   background-color: $highlight-color;
@@ -218,13 +221,6 @@
   margin-bottom: 50px;
 }
 
-@keyframes shake {
-  0%{ transform: rotate(0deg) }
-  33%{ transform: rotate(-33deg) }
-  66%{ transform: rotate(33deg) }
-  100%{ transform: rotate(0deg) }
-}
-
 @media (max-height: 400px){
   .down-arrow{
     display: none;
@@ -255,4 +251,11 @@
   0%{opacity: 1; bottom: 15px;}
   50%{opacity: 0.5; bottom: 10px;}
   100%{opacity: 1; bottom: 15px;}
+}
+
+@keyframes shake {
+  0%{ transform: rotate(0deg) }
+  33%{ transform: rotate(-33deg) }
+  66%{ transform: rotate(33deg) }
+  100%{ transform: rotate(0deg) }
 }

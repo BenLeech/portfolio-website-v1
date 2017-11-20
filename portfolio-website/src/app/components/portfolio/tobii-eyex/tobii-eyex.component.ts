@@ -5,7 +5,7 @@ import {PortfolioElement} from "../../../model/Portfolio-Element";
 @Component({
   selector: 'tobii-eyex',
   templateUrl: './tobii-eyex.component.html',
-  styleUrls: ['./tobii-eyex.component.scss']
+  styleUrls: ['../portfolio-template.scss']
 })
 export class TobiiEyeXComponent implements OnInit{
 
