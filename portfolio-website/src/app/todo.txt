@@ -40,7 +40,7 @@
 -refactor portfolio service and components
 -fix mobile dropdown margin on splash screen
 -general mobile responsiveness cleanup
--create logo and add it to navbar
+|-create logo and add it to navbar
 -create favicon based on logo
 -find new image for splash
 -remove unnecessary tests

@@ -1,7 +1,7 @@
 <div class="navbar-wrapper" [@dropdownMenuState]="state">
   <div class="navbar" [@navBarState]="navState" [ngClass]="{'sticky-nav': showNav, 'bg-transparent': showDropdown}">
     <div class="logo-container clickable" routerLink='/home'>
-      BEN LEECH
+      <img class="personal-logo" src="assets/img/ben_leech_logo.svg">BEN LEECH
     </div>
     <div class="nav-links-container">
       <span class="nav-link clickable" *ngFor="let navLink of navLinks" [ngClass]="{'active': navLink.active}"
