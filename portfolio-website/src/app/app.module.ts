@@ -20,6 +20,7 @@ import { ChrisSoterosComponent } from './components/portfolio/chris-soteros/chri
 import { MiriComponent } from './components/portfolio/miri/miri.component';
 import {TobiiEyeXComponent} from "./components/portfolio/tobii-eyex/tobii-eyex.component";
 import {FadeToTopDirective} from "./directives/fade-to-top.directive";
+import {ParallaxDirective} from "./directives/parallax.directive";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {FadeToTopDirective} from "./directives/fade-to-top.directive";
     SkillBarComponent,
     WhenInViewDirective,
     FadeToTopDirective,
+    ParallaxDirective,
     PortfolioComponent,
     ChrisSoterosComponent,
     MiriComponent,

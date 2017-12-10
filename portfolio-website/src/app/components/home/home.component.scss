@@ -9,10 +9,11 @@
   overflow: auto;
   align-items: center;
   position: relative;
-  background-image: url('../../../assets/img/cover-photo1.png');
+  background-image: url('../../../assets/img/cover-photo3.jpg');
   background-size: cover;
   //background-attachment: fixed;  //this line is causing lag
-  background-position: center;
+  //background-position: center;
+  background-position-x: center;
   -webkit-transform: translate3d(0,0,0);
 }
 
