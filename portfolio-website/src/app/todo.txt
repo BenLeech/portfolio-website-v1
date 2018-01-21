@@ -37,7 +37,7 @@
 |-clean up css and make common classes
 |-create logo and add it to navbar
 |-remove unnecessary tests
--parallax scroll effects on splash
+//-parallax scroll effects on splash - //delayed/reconsider
 -improve view resume animation
 -refactor portfolio service and components
 -fix mobile dropdown margin on splash screen
