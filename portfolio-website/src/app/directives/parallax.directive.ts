@@ -17,6 +17,8 @@ export class ParallaxDirective implements OnInit, OnDestroy{
 
   ngOnInit(){
     this.parallaxLayer = this.el.nativeElement;
+    this.parallaxLayer.style.zIndex = '-1';
+    this.parallaxLayer.style.transition = '0.07s ease-in-out';
 
     Observable.fromEvent(window, 'scroll').subscribe(() => this.parallax());
 
@@ -33,6 +35,7 @@ export class ParallaxDirective implements OnInit, OnDestroy{
     if(this.speed == 0)
       this.parallaxLayer.style.backgroundPositionY = 0;
     else
-      this.parallaxLayer.style.backgroundPositionY = -(window.pageYOffset / this.speed) + '%';
+      this.parallaxLayer.style.transform = 'translate3d(0,'+ window.scrollY * 0.5 +'px ,0)';
+      //this.parallaxLayer.style.backgroundPositionY = -(window.pageYOffset / this.speed) + '%';
   }
 }
