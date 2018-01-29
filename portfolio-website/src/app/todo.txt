@@ -38,15 +38,18 @@
 |-create logo and add it to navbar
 |-remove unnecessary tests
 //-parallax scroll effects on splash - //delayed/reconsider
+-improve contact button
+-improve portfolio display cards
+-improve portfolio case study pages
 -improve view resume animation
 -refactor portfolio service and components
 -fix mobile dropdown margin on splash screen
 -general mobile responsiveness cleanup
 -create favicon based on logo
+-fix whenInView pushing footer around
 -find new image for splash
--make a whenInView queue structure for portfolio
+-make a whenInView queue structure for portfolio/improve whenInView
 -use fontawesome pro SVGs instead of web font
-//-create loading spinner until images are loaded//
 -find faster image loading techniques
 -link code or demos to portfolio
 -rename components

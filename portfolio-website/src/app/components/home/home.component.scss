@@ -197,24 +197,34 @@
 }
 
 .contact-container h1{
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .contact-container .btn-email{
-  color: $active-color;
-  background-color: $highlight-color;
+  color: $highlight-color;
+  background-color: $active-color;
   border: 3px solid $active-color;
   font-weight: bold;
   transition: all 0.5s ease;
-  font-size: 24px;
-  padding: 10px 15px 10px 15px;
-  border-radius: 10px;
+  font-size: 16px;
+  padding: 15px 35px 15px 35px;
+  border-radius: 55px;
   margin-top: 15px;
 }
 
 .contact-container .btn-email:hover{
-  background-color: $active-color;
-  color: $highlight-color;
+  background-color: #7c4856;
+  border-color: #7C4856;
+  transform: scaleX(1.1);
+}
+
+.contact-container .btn-email .btn-email-text{
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.contact-container .btn-email:hover .btn-email-text{
+  transform: scaleX(0.9);
 }
 
 .contact-message{
@@ -256,7 +266,7 @@
 
 @keyframes shake {
   0%{ transform: rotate(0deg) }
-  33%{ transform: rotate(-33deg) }
-  66%{ transform: rotate(33deg) }
+  33%{ transform: rotate(-25deg) }
+  66%{ transform: rotate(25deg) }
   100%{ transform: rotate(0deg) }
 }
