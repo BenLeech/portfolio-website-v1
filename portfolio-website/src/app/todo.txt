@@ -38,7 +38,7 @@
 |-create logo and add it to navbar
 |-remove unnecessary tests
 //-parallax scroll effects on splash - //delayed/reconsider
--improve contact button
+|-improve contact button
 -improve portfolio display cards
 -improve portfolio case study pages
 -improve view resume animation

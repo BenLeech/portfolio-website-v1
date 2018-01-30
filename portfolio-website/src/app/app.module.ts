@@ -21,6 +21,7 @@ import { MiriComponent } from './components/portfolio/miri/miri.component';
 import {TobiiEyeXComponent} from "./components/portfolio/tobii-eyex/tobii-eyex.component";
 import {FadeToTopDirective} from "./directives/fade-to-top.directive";
 import {ParallaxDirective} from "./directives/parallax.directive";
+import {PortfolioDisplay2Component} from "./components/common/portfolio-display2/portfolio-display2.component";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {ParallaxDirective} from "./directives/parallax.directive";
     HomeComponent,
     NavbarComponent,
     PortfolioDisplayComponent,
+    PortfolioDisplay2Component,
     FooterComponent,
     FeaturedWorkComponent,
     AboutMeComponent,
