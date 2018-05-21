@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "body, html {\n  max-width: 100%;\n  height: 100%;\n  margin: 0;\n  font-family: Ubuntu, SansSerif; }\n\nbody {\n  background-color: #192231; }\n\n.display-none {\n  display: none; }\n\n.display-block {\n  display: block; }\n\n.text-group {\n  white-space: nowrap; }\n\n*:focus {\n  outline: none; }\n\n.clickable {\n  cursor: pointer; }\n\na {\n  color: inherit;\n  text-decoration: inherit; }\n\n.hidden-before-view {\n  opacity: 0;\n  transform: translateY(50px); }\n\n.enter-view {\n  animation: fade-into-view 1s;\n  animation-fill-mode: forwards; }\n\n@keyframes fade-into-view {\n  0% {\n    opacity: 0;\n    transform: translateY(50px); }\n  100% {\n    opacity: 1;\n    transform: translateY(0); } }\n", ""]);
+exports.push([module.i, "body, html {\n  max-width: 100%;\n  height: 100%;\n  margin: 0;\n  font-family: Ubuntu, SansSerif, Arial; }\n\nbody {\n  background-color: #192231; }\n\n.display-none {\n  display: none; }\n\n.display-block {\n  display: block; }\n\n.text-group {\n  white-space: nowrap; }\n\n*:focus {\n  outline: none; }\n\n.clickable {\n  cursor: pointer; }\n\na {\n  color: inherit;\n  text-decoration: inherit; }\n\n.hidden-before-view {\n  opacity: 0;\n  transform: translateY(50px); }\n\n.enter-view {\n  animation: fade-into-view 1s;\n  animation-fill-mode: forwards; }\n\n@keyframes fade-into-view {\n  0% {\n    opacity: 0;\n    transform: translateY(50px); }\n  100% {\n    opacity: 1;\n    transform: translateY(0); } }\n", ""]);
 
 // exports
 
