@@ -40,8 +40,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   showDropdown: boolean = false;
   showNav: boolean = false;
 
-  private state: string = 'inactive';
-  private navState: string = 'stick';
+  state: string = 'inactive';
+  navState: string = 'stick';
 
   navLinks:Array<NavLink> = [];
 
