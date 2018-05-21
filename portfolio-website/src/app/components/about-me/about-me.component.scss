@@ -28,7 +28,7 @@
 
 .about-me-message{
   flex: 1;
-  min-width: 450px;
+  //min-width: 450px;
   padding: 10px;
 }
 
@@ -253,5 +253,24 @@
 @media (max-width: 800px) {
   .personal-image{
     width: 200px;
+  }
+
+  .about-me-message {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .job-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .experience-container {
+    padding: 50px 5px 50px 5px;
+  }
+
+  .education-container {
+    padding: 50px 5px 50px 5px;
   }
 }

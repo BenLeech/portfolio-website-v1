@@ -167,6 +167,7 @@
 @media (max-width: 780px){
   .navbar{
     background-color: $highlight-color;
+    padding: 0 20px 0 20px;
   }
 
   .nav-link{
@@ -175,6 +176,7 @@
 
   .navbar .fa-bars{
     display: block;
+    font-size: 1.3rem;
   }
 }
 
