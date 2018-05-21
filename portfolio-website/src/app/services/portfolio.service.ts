@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {PortfolioElement} from "../model/Portfolio-Element";
 import {Router} from "@angular/router";
 
-const basePath = "/assets/img/portfolio/";
+const basePath = "assets/img/portfolio/";
 
 @Injectable()
 export class PortfolioService {
@@ -11,7 +11,7 @@ export class PortfolioService {
     {title: "University Professor Profile website", imagePath:basePath+"helloWorldProjectCover.png",
       tags: ['Web Development'], linkPath: '/portfolio/uni-prof-portfolio'};
   miri: PortfolioElement =
-    {title: "Miri", imagePath:basePath+"miri_mockup.jpg",
+    {title: "Miri", imagePath:basePath+"/miri/miri_mockup.jpg",
       tags: ['Game Development'], linkPath: '/portfolio/miri-game'};
   tobiiEyeX: PortfolioElement =
     {title: "Eye Tracking Research", imagePath:basePath+"tobii_eyex.JPG",
