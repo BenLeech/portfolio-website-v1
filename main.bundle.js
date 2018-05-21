@@ -1600,7 +1600,7 @@ var PortfolioService = (function () {
         this.router = router;
         this.helloWorldProject = { title: "University Professor Profile website", imagePath: basePath + "helloWorldProjectCover.png",
             tags: ['Web Development'], linkPath: '/portfolio/uni-prof-portfolio' };
-        this.miri = { title: "Miri", imagePath: basePath + "miri_mockup.jpg",
+        this.miri = { title: "Miri", imagePath: basePath + "/miri/miri_mockup.jpg",
             tags: ['Game Development'], linkPath: '/portfolio/miri-game' };
         this.tobiiEyeX = { title: "Eye Tracking Research", imagePath: basePath + "tobii_eyex.JPG",
             tags: ['Application Development, Research'], linkPath: '/portfolio/eye-tracking-research' };
