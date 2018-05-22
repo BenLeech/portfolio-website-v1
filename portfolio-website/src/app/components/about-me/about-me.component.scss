@@ -65,6 +65,7 @@
 .skill-container-right{
   display: flex;
   flex-direction: column;
+  padding: 0 20px 0 20px;
   max-width: 400px;
   min-width: 150px;
 }
@@ -83,14 +84,10 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 5px;
+  box-sizing: border-box;
 }
 
-.skills-body > div{
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.skills-container span{
+.skills-container span {
   border: 1px solid $off-white;
   padding: 5px 10px 5px 10px;
   margin: 10px 5px 10px 5px;
