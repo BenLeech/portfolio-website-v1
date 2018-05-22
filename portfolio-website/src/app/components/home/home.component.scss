@@ -245,9 +245,13 @@
   }
 }
 
-@media (max-width: 426px){
+@media (max-width: 500px){
   .down-arrow{
     display: none;
+  }
+
+  .featured-container {
+    padding: 35px 0 35px 0;
   }
 }
 
