@@ -28,9 +28,9 @@ export class FadeToTopDirective implements OnInit, OnDestroy{
 
   handleScroll(){
     this.offsetTop = this.el.nativeElement.offsetTop;
-    if(((this.offsetTop + this.elementHeight) - window.scrollY) <= this.elementHeight){
+    if(((this.offsetTop + this.elementHeight) - window.scrollY) <= (this.elementHeight + 75)){
       this.el.nativeElement.style.opacity = (((this.offsetTop + this.elementHeight) - window.scrollY) <= 0)
-        ? 0 : (((this.offsetTop + this.elementHeight) - window.scrollY) / 200);
+        ? 0 : (((this.offsetTop + this.elementHeight - 75) - window.scrollY) / 200);
     }else{
       this.el.nativeElement.style.opacity = 1;
     }
