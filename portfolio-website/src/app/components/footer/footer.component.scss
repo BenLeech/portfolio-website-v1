@@ -29,27 +29,27 @@
   color: $off-white;
 }
 
-.linkedin:hover .fa-circle{
+:host-context(body.hasHover) .linkedin:hover .fa-circle{
   color: #24559c;
 }
 
-.linkedin:hover .fa-linkedin-square{
+:host-context(body.hasHover) .linkedin:hover .fa-linkedin-square{
   color: $off-white;
 }
 
-.github:hover .fa-circle{
+:host-context(body.hasHover) .github:hover .fa-circle{
   color: #000;
 }
 
-.github:hover .fa-github{
+:host-context(body.hasHover) .github:hover .fa-github{
   color: $off-white;
 }
 
-.instagram:hover .fa-circle{
+:host-context(body.hasHover) .instagram:hover .fa-circle{
   color: #bd286d;
 }
 
-.instagram:hover .fa-instagram{
+:host-context(body.hasHover) .instagram:hover .fa-instagram{
   color: $off-white;
 }
 
@@ -69,10 +69,10 @@
   transition: all 0.3s ease;
 }
 
-.btn-back-to-top:hover span{
+:host-context(body.hasHover) .btn-back-to-top:hover span{
   transform: translateY(-5px);
 }
 
-.btn-back-to-top:hover .fa-circle{
+:host-context(body.hasHover) .btn-back-to-top:hover .fa-circle{
   color: $off-white;
 }

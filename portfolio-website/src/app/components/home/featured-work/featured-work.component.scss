@@ -31,7 +31,7 @@
   animation: btn-unhover 0.2s;
 }
 
-.btn-view-more:hover{
+:host-context(body.hasHover) .btn-view-more:hover{
   animation: btn-hover 0.5s;
   animation-fill-mode:forwards;
 }

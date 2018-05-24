@@ -152,7 +152,7 @@
   transition: all 0.5s ease;
 }
 
-.expertise-bubble:hover i{
+:host-context(body.hasHover) .expertise-bubble:hover i{
   animation: 1s shake;
 }
 
@@ -212,7 +212,7 @@
   margin-top: 15px;
 }
 
-.contact-container .btn-email:hover{
+:host-context(body.hasHover) .contact-container .btn-email:hover{
   background-color: #7c4856;
   border-color: #7C4856;
   transform: scaleX(1.1);
@@ -223,7 +223,7 @@
   transition: all 0.5s ease;
 }
 
-.contact-container .btn-email:hover .btn-email-text{
+:host-context(body.hasHover) .contact-container .btn-email:hover .btn-email-text{
   transform: scaleX(0.9);
 }
 

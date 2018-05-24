@@ -188,17 +188,17 @@
   transition: all 0.3s ease;
 }
 
-.resume-container:hover{
+:host-context(body.hasHover) .resume-container:hover{
   background-color: $primary-hover;
 }
 
-.resume-container:hover .btn-open{
+:host-context(body.hasHover) .resume-container:hover .btn-open{
   //transform: translateY(-5px) rotateX(0deg);
   transform: translateY(-5px);
   opacity: 1;
 }
 
-.resume-container:hover .resume-title{
+:host-context(body.hasHover) .resume-container:hover .resume-title{
   //transform: translateY(30px) rotateX(60deg);
   transform: translateY(20px);
   opacity: 0;

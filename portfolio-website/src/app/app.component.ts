@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit, Renderer2} from '@angular/core';
 import {Router, NavigationStart, NavigationEnd} from "@angular/router";
 import { Location, PopStateEvent } from "@angular/common";
 
@@ -12,9 +12,12 @@ export class AppComponent implements OnInit{
 
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
+  private hasHoverClass = false;
+  private lastTouchTime = new Date();
 
-  constructor(private router: Router, private location: Location){
-  }
+  constructor(private router: Router,
+              private location: Location,
+              private renderer: Renderer2){}
 
   ngOnInit(){
     this.location.subscribe((ev:PopStateEvent) => {
@@ -33,6 +36,31 @@ export class AppComponent implements OnInit{
           window.scrollTo(0, 0);
       }
     });
+
+    this.enableHover();
+  }
+
+  @HostListener('mousemove')
+  enableHover() {
+    if (this.hasHoverClass){
+      return;
+    }
+    
+    this.renderer.addClass(document.body, 'hasHover');
+    this.hasHoverClass = true;
+  }
+
+  @HostListener('touchstart')
+  disableHover() {
+    if (!this.hasHoverClass) return;
+
+    this.renderer.removeClass(document.body, 'hasHover');
+    this.hasHoverClass = false;
+  }
+
+  @HostListener('touchstart')
+  updateLastTouchTime() {
+    this.lastTouchTime = new Date();
   }
 
 }

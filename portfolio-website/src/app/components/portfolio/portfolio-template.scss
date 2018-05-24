@@ -122,13 +122,13 @@
   color: $primary-color;
 }
 
-.btn-right:hover i{
+:host-context(body.hasHover) .btn-right:hover i{
   transform: translateX(5px);
   color: $highlight-color;
   z-index: 6;
 }
 
-.btn-left:hover i{
+:host-context(body.hasHover) .btn-left:hover i{
   transform: translateX(-5px);
   color: $highlight-color;
 }
@@ -166,7 +166,7 @@
   transition: all 0.5s ease;
 }
 
-.btn-mobile-prev:hover .fa-circle{
+:host-context(body.hasHover) .btn-mobile-prev:hover .fa-circle{
   color: $highlight-color;
   transition: all 0.5s ease;
 }
@@ -176,7 +176,7 @@
   right: 0;
 }
 
-.btn-mobile-next:hover .fa-circle{
+:host-context(body.hasHover) .btn-mobile-next:hover .fa-circle{
   color: $highlight-color;
   transition: all 0.5s ease;
 }
@@ -188,7 +188,7 @@
   transition: all 0.5s ease;
 }
 
-.btn-mobile-menu:hover{
+:host-context(body.hasHover) .btn-mobile-menu:hover{
   color: $highlight-color;
 }
 
