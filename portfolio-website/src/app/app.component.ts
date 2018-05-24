@@ -8,12 +8,11 @@ import { Location, PopStateEvent } from "@angular/common";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'app';
+  title = 'Ben Leech';
 
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
   private hasHoverClass = false;
-  private lastTouchTime = new Date();
 
   constructor(private router: Router,
               private location: Location,
@@ -45,7 +44,7 @@ export class AppComponent implements OnInit{
     if (this.hasHoverClass){
       return;
     }
-    
+
     this.renderer.addClass(document.body, 'hasHover');
     this.hasHoverClass = true;
   }
@@ -56,11 +55,6 @@ export class AppComponent implements OnInit{
 
     this.renderer.removeClass(document.body, 'hasHover');
     this.hasHoverClass = false;
-  }
-
-  @HostListener('touchstart')
-  updateLastTouchTime() {
-    this.lastTouchTime = new Date();
   }
 
 }
