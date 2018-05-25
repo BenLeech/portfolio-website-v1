@@ -1,4 +1,4 @@
-<div class="navbar-wrapper" [@dropdownMenuState]="state">
+<div class="navbar-wrapper">
   <div class="navbar" [@navBarState]="navState" [ngClass]="{'sticky-nav': showNav, 'bg-transparent': showDropdown}">
     <div class="logo-container clickable" routerLink='/home'>
       <img class="personal-logo" src="assets/img/ben_leech_logo.svg">BEN LEECH
@@ -10,32 +10,31 @@
       <i class="fa fa-times clickable" aria-hidden="true" *ngIf="showDropdown" (click)="toggleDropdown()"></i>
     </div>
   </div>
-  <div class="dropdown-container">
-    <div class="dropdown-inner" *ngIf="showDropdown">
-      <div class="nav-dropdown-link-row clickable" *ngFor="let navLink of navLinks">
-        <span class="nav-dropdown-link" [routerLink]='navLink.link'>{{navLink.text}} </span>
-      </div>
+</div>
+<div class="dropdown-container" [@dropdownMenuState]="state">
+  <div class="dropdown-inner" *ngIf="showDropdown">
+    <div class="nav-dropdown-link-row clickable" *ngFor="let navLink of navLinks">
+      <span class="nav-dropdown-link" [routerLink]='navLink.link'>{{navLink.text}} </span>
     </div>
-    <div class="social-media-container">
-      <a [attr.href]="linkedinPath" target="_blank">
+  </div>
+  <div class="social-media-container">
+    <a [attr.href]="linkedinPath" target="_blank">
         <span class="fa-stack fa-lg clickable">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-linkedin-square fa-stack-1x"></i>
         </span>
-      </a>
-      <a [attr.href]="githubPath" target="_blank">
+    </a>
+    <a [attr.href]="githubPath" target="_blank">
         <span class="fa-stack fa-lg clickable">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-github fa-stack-1x"></i>
         </span>
-      </a>
-      <a [attr.href]="instagramPath" target="_blank">
+    </a>
+    <a [attr.href]="instagramPath" target="_blank">
         <span class="fa-stack fa-lg clickable">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-instagram fa-stack-1x"></i>
         </span>
-      </a>
-    </div>
+    </a>
   </div>
 </div>
-

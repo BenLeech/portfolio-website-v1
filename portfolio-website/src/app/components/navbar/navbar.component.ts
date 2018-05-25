@@ -14,7 +14,9 @@ import {Subscription, Observable} from "rxjs";
       state('inactive', style({
         'height': '0'
       })),
-      state('mobileMenu',   style({'height': '100%' })),
+      state('mobileMenu',   style({
+        'height': '100%'
+      })),
       transition('inactive <=> mobileMenu', [animate('200ms ease')]),
     ]),
     trigger('navBarState', [
@@ -89,7 +91,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
     document.body.style.backgroundColor = (window.scrollY <= 0) ? '#192231' : '#494E6B';
 
-    if(this.navigationService.getScrollPercentage() === 0){
+    if(this.state === 'mobileMenu') {
+      this.navState = 'top';
+    } else if(this.state === 'mobileMenu' || this.navigationService.getScrollPercentage() === 0){
       this.navState = 'stick';
     }else{
       if(window.pageYOffset > (window.innerHeight * this.navigationService.getScrollPercentage()))
