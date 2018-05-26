@@ -13,6 +13,7 @@ export class AppComponent implements OnInit{
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
   private hasHoverClass = false;
+  private lastTouchTime = new Date();
 
   constructor(private router: Router,
               private location: Location,
@@ -41,10 +42,10 @@ export class AppComponent implements OnInit{
 
   @HostListener('mousemove')
   enableHover() {
-    if (this.hasHoverClass){
+    if((new Date().getTime() - this.lastTouchTime.getTime() < 500) || this.hasHoverClass){
       return;
     }
-
+    
     this.renderer.addClass(document.body, 'hasHover');
     this.hasHoverClass = true;
   }
@@ -55,6 +56,11 @@ export class AppComponent implements OnInit{
 
     this.renderer.removeClass(document.body, 'hasHover');
     this.hasHoverClass = false;
+  }
+
+  @HostListener('touchstart')
+  updateLastTouchTime() {
+    this.lastTouchTime = new Date();
   }
 
 }
