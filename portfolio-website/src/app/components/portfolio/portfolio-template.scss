@@ -37,11 +37,12 @@
 }
 
 .project-header{
+  box-sizing: border-box;
   background-color: $primary-color;
   color: $off-white;
   text-align: center;
   width: 100%;
-  padding: 75px 0 35px 0;
+  padding: 75px 10px 35px 10px;
   margin-bottom: 20px;
 }
 
@@ -203,6 +204,7 @@
 
   .body-wrapper {
     flex-wrap: wrap;
+    flex-direction: column-reverse;
   }
 
   .btn-left{
@@ -211,5 +213,17 @@
 
   .button-container{
     display: block;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .technologies-container {
+    margin-left: 0;
   }
 }
