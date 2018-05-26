@@ -1,4 +1,5 @@
 import {Component, OnInit, Input, ElementRef, Renderer2} from '@angular/core';
+import {trigger, state, style, animate, transition} from '@angular/animations';
 import {Router} from "@angular/router";
 import {PortfolioElement} from "../../../model/Portfolio-Element";
 
@@ -7,7 +8,7 @@ import {PortfolioElement} from "../../../model/Portfolio-Element";
   templateUrl: './portfolio-display.component.html',
   styleUrls: ['./portfolio-display.component.scss'],
 })
-export class PortfolioDisplayComponent implements OnInit {
+export class PortfolioDisplay2Component implements OnInit {
 
   @Input() element: PortfolioElement;
 

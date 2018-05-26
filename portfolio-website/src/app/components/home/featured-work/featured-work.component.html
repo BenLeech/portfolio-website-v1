@@ -1,7 +1,7 @@
 <div class="featured-work-container">
   <h1>Featured Work</h1>
   <div class="featured-work-inner">
-    <portfolio-display2 class="portfolio-display" *ngFor="let work of featuredWork" [element]="work"></portfolio-display2>
+    <portfolio-display class="portfolio-display" *ngFor="let work of featuredWork" [element]="work"></portfolio-display>
   </div>
   <div class="button-container">
     <button class="btn-view-more clickable" [routerLink]="['/portfolio']">View More</button>

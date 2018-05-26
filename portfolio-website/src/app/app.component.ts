@@ -45,7 +45,7 @@ export class AppComponent implements OnInit{
     if((new Date().getTime() - this.lastTouchTime.getTime() < 500) || this.hasHoverClass){
       return;
     }
-    
+
     this.renderer.addClass(document.body, 'hasHover');
     this.hasHoverClass = true;
   }

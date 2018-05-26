@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { PortfolioDisplayComponent } from './components/common/portfolio-display/portfolio-display.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FeaturedWorkComponent } from './components/home/featured-work/featured-work.component';
 import {PortfolioService} from "./services/portfolio.service";
@@ -21,14 +20,13 @@ import { MiriComponent } from './components/portfolio/miri/miri.component';
 import {TobiiEyeXComponent} from "./components/portfolio/tobii-eyex/tobii-eyex.component";
 import {FadeToTopDirective} from "./directives/fade-to-top.directive";
 import {ParallaxDirective} from "./directives/parallax.directive";
-import {PortfolioDisplay2Component} from "./components/common/portfolio-display2/portfolio-display2.component";
+import {PortfolioDisplay2Component} from "./components/common/portfolio-display/portfolio-display.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    PortfolioDisplayComponent,
     PortfolioDisplay2Component,
     FooterComponent,
     FeaturedWorkComponent,
