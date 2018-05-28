@@ -134,20 +134,24 @@
   color: $highlight-color;
 }
 
-.button-container{
+.button-container {
   color: $primary-color;
   width: 100%;
-  position: relative;
-  height: 100px;
   display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.button-container .fa-chevron-left{
+.btn-back-to-portfolio {
+  background-color: $primary-color;
   color: $off-white;
+  padding: 10px;
 }
 
-.button-container .fa-chevron-right{
-  color: $off-white;
+:host-context(body.hasHover) .btn-back-to-portfolio:hover {
+  background-color: $highlight-color;
+  transition: all 0.5s ease;
 }
 
 .button-container .fa-stack{
@@ -158,13 +162,8 @@
   color: $off-white;
 }
 
-.btn-mobile-prev{
-  display: flex;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  max-width: 45%;
-  transition: all 0.5s ease;
+.visibility-hidden {
+  visibility: hidden;
 }
 
 :host-context(body.hasHover) .btn-mobile-prev:hover .fa-circle{
@@ -172,9 +171,16 @@
   transition: all 0.5s ease;
 }
 
-.btn-mobile-next{
-  position: absolute;
-  right: 0;
+.btn-mobile-next .fa-chevron-right {
+  color: $off-white;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.btn-mobile-prev .fa-chevron-left {
+  color: $off-white;
+  margin-top: 2px;
+  margin-right: 2px;
 }
 
 :host-context(body.hasHover) .btn-mobile-next:hover .fa-circle{
@@ -183,10 +189,6 @@
 }
 
 .btn-mobile-menu{
-  position: absolute;
-  left: 50%;
-  margin-left: -20px;
-  transition: all 0.5s ease;
 }
 
 :host-context(body.hasHover) .btn-mobile-menu:hover{
@@ -212,7 +214,7 @@
   }
 
   .button-container{
-    display: block;
+    display: flex;
   }
 
   .title {
@@ -225,5 +227,25 @@
 
   .technologies-container {
     margin-left: 0;
+  }
+
+  .technologies-container ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .technologies-container li {
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px 0 0;
+  }
+
+  .technologies-container li:not(:last-child):after {
+    content: "|";
+    color: $faded-text-color-light;
+    font-size: 1.3rem;
+    position: absolute;
+    right: 0;
   }
 }

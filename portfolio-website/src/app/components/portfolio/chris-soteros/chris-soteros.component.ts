@@ -15,9 +15,6 @@ export class ChrisSoterosComponent implements OnInit {
   displayLeftArrow: boolean;
   displayRightArrow: boolean;
 
-  nextTitle: string;
-  prevTitle: string;
-
   constructor(private navigationService: NavigationService,
               private portfolioService: PortfolioService) { }
 
@@ -28,12 +25,6 @@ export class ChrisSoterosComponent implements OnInit {
     this.portfolioService.setCurrentPortfolioElement(this.portfolioService.helloWorldProject);
     this.displayRightArrow = !this.portfolioService.isLast(this.portfolioElement);
     this.displayLeftArrow = !this.portfolioService.isFirst(this.portfolioElement);
-
-    if(this.displayRightArrow)
-      this.nextTitle = this.portfolioService.getNextTitle();
-
-    if(this.displayLeftArrow)
-      this.prevTitle = this.portfolioService.getLastTitle();
   }
 
   onNextArrowClick(){
