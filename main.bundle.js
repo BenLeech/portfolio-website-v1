@@ -25,6 +25,7 @@ webpackEmptyContext.id = "../../../../../src async recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_portfolio_chris_soteros_chris_soteros_component__ = __webpack_require__("../../../../../src/app/components/portfolio/chris-soteros/chris-soteros.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_portfolio_miri_miri_component__ = __webpack_require__("../../../../../src/app/components/portfolio/miri/miri.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_portfolio_tobii_eyex_tobii_eyex_component__ = __webpack_require__("../../../../../src/app/components/portfolio/tobii-eyex/tobii-eyex.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_portfolio_reactive_dev_day_reactive_dev_day_component__ = __webpack_require__("../../../../../src/app/components/portfolio/reactive-dev-day/reactive-dev-day.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -32,6 +33,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -69,6 +71,10 @@ var routes = [
                 path: 'eye-tracking-research',
                 component: __WEBPACK_IMPORTED_MODULE_7__components_portfolio_tobii_eyex_tobii_eyex_component__["a" /* TobiiEyeXComponent */]
             },
+            {
+                path: 'reactive-dev-day',
+                component: __WEBPACK_IMPORTED_MODULE_8__components_portfolio_reactive_dev_day_reactive_dev_day_component__["a" /* ReactiveDevDayComponent */]
+            }
         ]
     },
     {
@@ -149,6 +155,7 @@ var AppComponent = (function () {
         this.title = 'Ben Leech';
         this.yScrollStack = [];
         this.hasHoverClass = false;
+        this.lastTouchTime = new Date();
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -172,7 +179,7 @@ var AppComponent = (function () {
         this.enableHover();
     };
     AppComponent.prototype.enableHover = function () {
-        if (this.hasHoverClass) {
+        if ((new Date().getTime() - this.lastTouchTime.getTime() < 500) || this.hasHoverClass) {
             return;
         }
         this.renderer.addClass(document.body, 'hasHover');
@@ -183,6 +190,9 @@ var AppComponent = (function () {
             return;
         this.renderer.removeClass(document.body, 'hasHover');
         this.hasHoverClass = false;
+    };
+    AppComponent.prototype.updateLastTouchTime = function () {
+        this.lastTouchTime = new Date();
     };
     return AppComponent;
 }());
@@ -198,6 +208,12 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], AppComponent.prototype, "disableHover", null);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* HostListener */])('touchstart'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AppComponent.prototype, "updateLastTouchTime", null);
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'app-root',
@@ -223,22 +239,22 @@ var _a, _b, _c;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_common_portfolio_display_portfolio_display_component__ = __webpack_require__("../../../../../src/app/components/common/portfolio-display/portfolio-display.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/components/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_home_featured_work_featured_work_component__ = __webpack_require__("../../../../../src/app/components/home/featured-work/featured-work.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_portfolio_service__ = __webpack_require__("../../../../../src/app/services/portfolio.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_about_me_about_me_component__ = __webpack_require__("../../../../../src/app/components/about-me/about-me.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_navigation_service__ = __webpack_require__("../../../../../src/app/services/navigation.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_common_skill_bar_skill_bar_component__ = __webpack_require__("../../../../../src/app/components/common/skill-bar/skill-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__directives_when_in_view_directive__ = __webpack_require__("../../../../../src/app/directives/when-in-view.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_portfolio_portfolio_component__ = __webpack_require__("../../../../../src/app/components/portfolio/portfolio.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_portfolio_chris_soteros_chris_soteros_component__ = __webpack_require__("../../../../../src/app/components/portfolio/chris-soteros/chris-soteros.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_portfolio_miri_miri_component__ = __webpack_require__("../../../../../src/app/components/portfolio/miri/miri.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_portfolio_tobii_eyex_tobii_eyex_component__ = __webpack_require__("../../../../../src/app/components/portfolio/tobii-eyex/tobii-eyex.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__directives_fade_to_top_directive__ = __webpack_require__("../../../../../src/app/directives/fade-to-top.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__directives_parallax_directive__ = __webpack_require__("../../../../../src/app/directives/parallax.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_common_portfolio_display2_portfolio_display2_component__ = __webpack_require__("../../../../../src/app/components/common/portfolio-display2/portfolio-display2.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/components/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_home_featured_work_featured_work_component__ = __webpack_require__("../../../../../src/app/components/home/featured-work/featured-work.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_portfolio_service__ = __webpack_require__("../../../../../src/app/services/portfolio.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_about_me_about_me_component__ = __webpack_require__("../../../../../src/app/components/about-me/about-me.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_navigation_service__ = __webpack_require__("../../../../../src/app/services/navigation.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_common_skill_bar_skill_bar_component__ = __webpack_require__("../../../../../src/app/components/common/skill-bar/skill-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__directives_when_in_view_directive__ = __webpack_require__("../../../../../src/app/directives/when-in-view.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_portfolio_portfolio_component__ = __webpack_require__("../../../../../src/app/components/portfolio/portfolio.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_portfolio_chris_soteros_chris_soteros_component__ = __webpack_require__("../../../../../src/app/components/portfolio/chris-soteros/chris-soteros.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_portfolio_miri_miri_component__ = __webpack_require__("../../../../../src/app/components/portfolio/miri/miri.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_portfolio_tobii_eyex_tobii_eyex_component__ = __webpack_require__("../../../../../src/app/components/portfolio/tobii-eyex/tobii-eyex.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__directives_fade_to_top_directive__ = __webpack_require__("../../../../../src/app/directives/fade-to-top.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__directives_parallax_directive__ = __webpack_require__("../../../../../src/app/directives/parallax.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_common_portfolio_display_portfolio_display_component__ = __webpack_require__("../../../../../src/app/components/common/portfolio-display/portfolio-display.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_portfolio_reactive_dev_day_reactive_dev_day_component__ = __webpack_require__("../../../../../src/app/components/portfolio/reactive-dev-day/reactive-dev-day.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -280,24 +296,24 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_5__components_home_home_component__["a" /* HomeComponent */],
             __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__["a" /* NavbarComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__components_common_portfolio_display_portfolio_display_component__["a" /* PortfolioDisplayComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__components_common_portfolio_display2_portfolio_display2_component__["a" /* PortfolioDisplay2Component */],
-            __WEBPACK_IMPORTED_MODULE_8__components_footer_footer_component__["a" /* FooterComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__components_home_featured_work_featured_work_component__["a" /* FeaturedWorkComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__components_about_me_about_me_component__["a" /* AboutMeComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__components_common_skill_bar_skill_bar_component__["a" /* SkillBarComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__directives_when_in_view_directive__["a" /* WhenInViewDirective */],
-            __WEBPACK_IMPORTED_MODULE_20__directives_fade_to_top_directive__["a" /* FadeToTopDirective */],
-            __WEBPACK_IMPORTED_MODULE_21__directives_parallax_directive__["a" /* ParallaxDirective */],
-            __WEBPACK_IMPORTED_MODULE_16__components_portfolio_portfolio_component__["a" /* PortfolioComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__components_portfolio_chris_soteros_chris_soteros_component__["a" /* ChrisSoterosComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__components_portfolio_miri_miri_component__["a" /* MiriComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__components_portfolio_tobii_eyex_tobii_eyex_component__["a" /* TobiiEyeXComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__components_common_portfolio_display_portfolio_display_component__["a" /* PortfolioDisplay2Component */],
+            __WEBPACK_IMPORTED_MODULE_7__components_footer_footer_component__["a" /* FooterComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__components_home_featured_work_featured_work_component__["a" /* FeaturedWorkComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__components_about_me_about_me_component__["a" /* AboutMeComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__components_common_skill_bar_skill_bar_component__["a" /* SkillBarComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__directives_when_in_view_directive__["a" /* WhenInViewDirective */],
+            __WEBPACK_IMPORTED_MODULE_19__directives_fade_to_top_directive__["a" /* FadeToTopDirective */],
+            __WEBPACK_IMPORTED_MODULE_20__directives_parallax_directive__["a" /* ParallaxDirective */],
+            __WEBPACK_IMPORTED_MODULE_15__components_portfolio_portfolio_component__["a" /* PortfolioComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__components_portfolio_chris_soteros_chris_soteros_component__["a" /* ChrisSoterosComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__components_portfolio_miri_miri_component__["a" /* MiriComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__components_portfolio_tobii_eyex_tobii_eyex_component__["a" /* TobiiEyeXComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__components_portfolio_reactive_dev_day_reactive_dev_day_component__["a" /* ReactiveDevDayComponent */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_12__app_routing_module__["a" /* AppRoutingModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */]
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_11__app_routing_module__["a" /* AppRoutingModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_10__services_portfolio_service__["a" /* PortfolioService */], __WEBPACK_IMPORTED_MODULE_13__services_navigation_service__["a" /* NavigationService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_9__services_portfolio_service__["a" /* PortfolioService */], __WEBPACK_IMPORTED_MODULE_12__services_navigation_service__["a" /* NavigationService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -432,7 +448,7 @@ var _a, _b;
 /***/ "../../../../../src/app/components/common/portfolio-display/portfolio-display.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"portfolio-display-wrapper clickable hidden-before-view\" (click)=\"goToLink()\" (whenInView)=\"triggerFadeIn($event)\">\n\n  <div class=\"display-image\">\n    <div class=\"display-image-overlay\">\n      <span>View Project</span>\n    </div>\n    <img src={{element.imagePath}} />\n  </div>\n  <div class=\"display-text\">\n    <div class=\"display-title\">\n      {{element.title}}\n    </div>\n    <div class=\"display-tags\">\n      <span *ngFor=\"let tag of element.tags; let isLast=last\">{{tag}}{{isLast?'':','}} </span>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"portfolio-display-wrapper clickable hidden-before-view\" (click)=\"goToLink()\" (whenInView)=\"triggerFadeIn($event)\">\n\n  <div class=\"display-image\">\n    <div class=\"display-image-overlay\">\n      <div class=\"display-text\">\n        <div class=\"display-title\">\n          {{element.title}}\n        </div>\n        <div class=\"display-tags\">\n          <span *ngFor=\"let tag of element.tags; let isLast=last\">{{tag}}{{isLast?'':','}} </span>\n        </div>\n      </div>\n    </div>\n    <img src={{element.imagePath}} />\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -444,7 +460,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1 1 50%;\n      flex: 1 1 50%;\n  min-width: 400px;\n  max-width: 650px; }\n\n.portfolio-display-wrapper {\n  background-color: #fff;\n  padding: 10px;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1;\n      flex: 1;\n  width: 100%;\n  height: 350px;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  max-height: 400px;\n  margin: 15px;\n  box-sizing: border-box; }\n\n.display-image-overlay {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  color: #ebebeb;\n  background-color: rgba(25, 34, 49, 0.8);\n  opacity: 0;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-flex-align: center;\n      align-items: center;\n  font-size: 26px;\n  transition: all 0.5s ease; }\n\n.portfolio-display-wrapper .display-image img {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -webkit-transform: translate3d(0, 0, 0);\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1;\n      flex: 1;\n  transition: transform 1s ease; }\n\n:host-context(body.hasHover) .portfolio-display-wrapper:hover img {\n  transform: scale(1.05); }\n\n:host-context(body.hasHover) .portfolio-display-wrapper:hover .display-image-overlay {\n  opacity: 1; }\n\n.display-image {\n  overflow: hidden;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1;\n      flex: 1;\n  box-sizing: border-box;\n  position: relative; }\n\n.display-text {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  padding: 5px;\n  padding-top: 15px;\n  width: 100%;\n  line-height: 15px; }\n\n.display-tags {\n  color: #5f5f5f;\n  font-size: 12px; }\n", ""]);
+exports.push([module.i, ":host {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1 1 50%;\n      flex: 1 1 50%;\n  min-width: 350px;\n  max-width: 550px;\n  box-sizing: border-box; }\n\n.portfolio-display-wrapper {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1;\n      flex: 1;\n  width: 100%;\n  height: 300px;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  margin: 15px;\n  box-sizing: border-box; }\n\n.display-image-overlay {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  color: #ebebeb;\n  background-color: rgba(25, 34, 49, 0.8);\n  opacity: 0;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-flex-align: end;\n      align-items: flex-end;\n  font-size: 26px;\n  transition: all 0.5s ease; }\n\n.portfolio-display-wrapper .display-image img {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -webkit-transform: translate3d(0, 0, 0);\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1;\n      flex: 1;\n  transition: transform 1s ease; }\n\n:host-context(body.hasHover) .portfolio-display-wrapper:hover img {\n  transform: scale(1.05); }\n\n:host-context(body.hasHover) .portfolio-display-wrapper:hover .display-image-overlay {\n  opacity: 1; }\n\n.display-image {\n  overflow: hidden;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1;\n      flex: 1;\n  box-sizing: border-box;\n  position: relative; }\n\n.display-text {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  padding: 15px;\n  line-height: 25px;\n  width: 100%;\n  color: #fff; }\n\n.display-tags {\n  color: #e1d3cf;\n  font-size: 12px; }\n\n@media (max-width: 500px) {\n  :host {\n    min-width: 100%; } }\n", ""]);
 
 // exports
 
@@ -455,86 +471,6 @@ module.exports = module.exports.toString();
 /***/ }),
 
 /***/ "../../../../../src/app/components/common/portfolio-display/portfolio-display.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__model_Portfolio_Element__ = __webpack_require__("../../../../../src/app/model/Portfolio-Element.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__model_Portfolio_Element___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__model_Portfolio_Element__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PortfolioDisplayComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var PortfolioDisplayComponent = (function () {
-    function PortfolioDisplayComponent(router, renderer) {
-        this.router = router;
-        this.renderer = renderer;
-    }
-    PortfolioDisplayComponent.prototype.ngOnInit = function () {
-    };
-    PortfolioDisplayComponent.prototype.goToLink = function () {
-        if (this.element.linkPath)
-            this.router.navigate([this.element.linkPath]);
-    };
-    PortfolioDisplayComponent.prototype.triggerFadeIn = function (el) {
-        this.renderer.addClass(el.nativeElement, 'enter-view');
-    };
-    return PortfolioDisplayComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Input */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__model_Portfolio_Element__["PortfolioElement"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__model_Portfolio_Element__["PortfolioElement"]) === "function" && _a || Object)
-], PortfolioDisplayComponent.prototype, "element", void 0);
-PortfolioDisplayComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
-        selector: 'portfolio-display',
-        template: __webpack_require__("../../../../../src/app/components/common/portfolio-display/portfolio-display.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/common/portfolio-display/portfolio-display.component.scss")],
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Renderer2 */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Renderer2 */]) === "function" && _c || Object])
-], PortfolioDisplayComponent);
-
-var _a, _b, _c;
-//# sourceMappingURL=portfolio-display.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/common/portfolio-display2/portfolio-display2.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"portfolio-display-wrapper clickable hidden-before-view\" (click)=\"goToLink()\" (whenInView)=\"triggerFadeIn($event)\">\n\n  <div class=\"display-image\">\n    <div class=\"display-image-overlay\">\n      <div class=\"display-text\">\n        <div class=\"display-title\">\n          {{element.title}}\n        </div>\n        <div class=\"display-tags\">\n          <span *ngFor=\"let tag of element.tags; let isLast=last\">{{tag}}{{isLast?'':','}} </span>\n        </div>\n      </div>\n    </div>\n    <img src={{element.imagePath}} />\n  </div>\n\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/common/portfolio-display2/portfolio-display2.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ":host {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1 1 50%;\n      flex: 1 1 50%;\n  min-width: 350px;\n  max-width: 550px;\n  box-sizing: border-box; }\n\n.portfolio-display-wrapper {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1;\n      flex: 1;\n  width: 100%;\n  height: 300px;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  padding: 15px;\n  box-sizing: border-box; }\n\n.display-image-overlay {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  color: #ebebeb;\n  background-color: rgba(25, 34, 49, 0.8);\n  opacity: 0;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-flex-align: end;\n      align-items: flex-end;\n  font-size: 26px;\n  transition: all 0.5s ease; }\n\n.portfolio-display-wrapper .display-image img {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  -webkit-transform: translate3d(0, 0, 0);\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1;\n      flex: 1;\n  transition: transform 1s ease; }\n\n:host-context(body.hasHover) .portfolio-display-wrapper:hover img {\n  transform: scale(1.05); }\n\n:host-context(body.hasHover) .portfolio-display-wrapper:hover .display-image-overlay {\n  opacity: 1; }\n\n.display-image {\n  overflow: hidden;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex: 1;\n      flex: 1;\n  box-sizing: border-box;\n  position: relative; }\n\n.display-text {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  padding: 15px;\n  line-height: 25px;\n  width: 100%;\n  color: #fff; }\n\n.display-tags {\n  color: #e1d3cf;\n  font-size: 12px; }\n\n@media (max-width: 500px) {\n  :host {\n    min-width: 100%; } }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/common/portfolio-display2/portfolio-display2.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -577,15 +513,15 @@ __decorate([
 ], PortfolioDisplay2Component.prototype, "element", void 0);
 PortfolioDisplay2Component = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
-        selector: 'portfolio-display2',
-        template: __webpack_require__("../../../../../src/app/components/common/portfolio-display2/portfolio-display2.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/common/portfolio-display2/portfolio-display2.component.scss")],
+        selector: 'portfolio-display',
+        template: __webpack_require__("../../../../../src/app/components/common/portfolio-display/portfolio-display.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/common/portfolio-display/portfolio-display.component.scss")],
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Renderer2 */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* Renderer2 */]) === "function" && _c || Object])
 ], PortfolioDisplay2Component);
 
 var _a, _b, _c;
-//# sourceMappingURL=portfolio-display2.component.js.map
+//# sourceMappingURL=portfolio-display.component.js.map
 
 /***/ }),
 
@@ -767,7 +703,7 @@ FooterComponent = __decorate([
 /***/ "../../../../../src/app/components/home/featured-work/featured-work.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"featured-work-container\">\n  <h1>Featured Work</h1>\n  <div class=\"featured-work-inner\">\n    <portfolio-display2 class=\"portfolio-display\" *ngFor=\"let work of featuredWork\" [element]=\"work\"></portfolio-display2>\n  </div>\n  <div class=\"button-container\">\n    <button class=\"btn-view-more clickable\" [routerLink]=\"['/portfolio']\">View More</button>\n  </div>\n</div>\n"
+module.exports = "<div class=\"featured-work-container\">\n  <h1>Featured Work</h1>\n  <div class=\"featured-work-inner\">\n    <portfolio-display class=\"portfolio-display\" *ngFor=\"let work of featuredWork\" [element]=\"work\"></portfolio-display>\n  </div>\n  <div class=\"button-container\">\n    <button class=\"btn-view-more clickable\" [routerLink]=\"['/portfolio']\">View More</button>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1056,7 +992,7 @@ var _a, _b;
 /***/ "../../../../../src/app/components/portfolio/chris-soteros/chris-soteros.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page-container\">\n  <div class=\"btn-left clickable\" (click)=\"onBackArrowClick()\" *ngIf=\"displayLeftArrow\">\n    <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"></i>\n  </div>\n  <div class=\"btn-right clickable\" (click)=\"onNextArrowClick()\" *ngIf=\"displayRightArrow\">\n    <i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>\n  </div>\n\n  <div class=\"project-header\">\n    <div class=\"title\">University Professor Professional Portfolio</div>\n    <div class=\"subtitle\">Website Design and Development</div>\n  </div>\n\n  <div class=\"page-inner\">\n\n    <div class=\"button-container\" *ngIf=\"false\">\n      <button class=\"btn-circle\"><i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i></button>\n      <button class=\"btn-circle\"><i class=\"fa fa-th-large\" aria-hidden=\"true\"></i></button>\n      <button class=\"btn-circle\"><i class=\"fa fa-arrow-right\" aria-hidden=\"true\"></i></button>\n    </div>\n\n    <div class=\"main-picture-container\">\n      <img src=\"assets/img/portfolio/helloWorldProjectCover.png\">\n    </div>\n\n    <div class=\"project-body\">\n\n      <div class=\"body-wrapper\">\n        <div class=\"description-container\">\n          <h3 class=\"section-title\">About</h3>\n          <p>For my Computer Science 281 Website Design and Development class, I worked with a group of\n            three other students throughout the semester to develop this website from the ground up. It is a portfolio website\n            for a Mathematics and Statistics professor at the University of Saskatchewan that showcases her\n            background, research, publications, classes, and contact info.</p>\n\n          <p>We met with the professor several times during the design process to ensure we properly developed\n            what she wanted, and to pitch our design ideas and mock-ups.</p>\n\n          <p>The site features a navigation bar that fixes to the top of the screen if the page is scrolled down,\n            nested collapsible information panels, easy insertion of new data or text, and a data table of\n            publications that is sortable based on name or date.\n          </p>\n        </div>\n\n        <div class=\"technologies-container\">\n          <h3 class=\"section-title\">Technologies Used</h3>\n          <ul>\n            <li>HTML</li>\n            <li>CSS</li>\n            <li>Javascript</li>\n            <li>jQuery</li>\n            <li>Cloud9</li>\n          </ul>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"button-container\">\n      <div class=\"btn-mobile-prev clickable\" (click)=\"onBackArrowClick()\">\n        <span class=\"fa-stack fa-lg\" *ngIf=\"displayLeftArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-left fa-stack-1x\"></i>\n        </span>\n        <span class=\"mobile-title\">{{prevTitle}}</span>\n      </div>\n      <div class=\"btn-mobile-menu clickable\" [routerLink]=\"['/portfolio']\">\n        <span class=\"fa-stack fa-lg\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-th-large fa-stack-1x\"></i>\n        </span>\n      </div>\n      <div class=\"btn-mobile-next clickable\" (click)=\"onNextArrowClick()\">\n        <span class=\"mobile-title\">{{nextTitle}}</span>\n        <span class=\"fa-stack fa-lg\" *ngIf=\"displayRightArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-right fa-stack-1x\"></i>\n        </span>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"page-container\">\n  <div class=\"btn-left clickable\" (click)=\"onBackArrowClick()\" *ngIf=\"displayLeftArrow\">\n    <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"></i>\n  </div>\n  <div class=\"btn-right clickable\" (click)=\"onNextArrowClick()\" *ngIf=\"displayRightArrow\">\n    <i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>\n  </div>\n\n  <div class=\"project-header\">\n    <div class=\"title\">University Professor Professional Portfolio</div>\n    <div class=\"subtitle\">Website Design and Development</div>\n  </div>\n\n  <div class=\"page-inner\">\n\n    <div class=\"main-picture-container\">\n      <img src=\"assets/img/portfolio/helloWorldProjectCover.png\">\n    </div>\n\n    <div class=\"project-body\">\n\n      <div class=\"body-wrapper\">\n        <div class=\"description-container\">\n          <h3 class=\"section-title\">About</h3>\n          <p>For my Computer Science 281 Website Design and Development class, I worked with a group of\n            three other students throughout the semester to develop this website from the ground up. It is a portfolio website\n            for a Mathematics and Statistics professor at the University of Saskatchewan that showcases her\n            background, research, publications, classes, and contact info.</p>\n\n          <p>We met with the professor several times during the design process to ensure we properly developed\n            what she wanted, and to pitch our design ideas and mock-ups.</p>\n\n          <p>The site features a navigation bar that fixes to the top of the screen if the page is scrolled down,\n            nested collapsible information panels, easy insertion of new data or text, and a data table of\n            publications that is sortable based on name or date.\n          </p>\n        </div>\n\n        <div class=\"technologies-container\">\n          <h3 class=\"section-title\">Technologies</h3>\n          <ul>\n            <li>HTML</li>\n            <li>CSS</li>\n            <li>Javascript</li>\n            <li>jQuery</li>\n            <li>Cloud9</li>\n          </ul>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"button-container\">\n      <div class=\"btn-mobile-prev\" (click)=\"onBackArrowClick()\">\n        <span class=\"fa-stack fa-lg clickable\" [class.visibility-hidden]=\"!displayLeftArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-left fa-stack-1x\"></i>\n        </span>\n      </div>\n      <div class=\"btn-mobile-menu\" [routerLink]=\"['/portfolio']\">\n        <span class=\"btn-back-to-portfolio clickable\">Back to Portfolio</span>\n      </div>\n      <div class=\"btn-mobile-next\" (click)=\"onNextArrowClick()\">\n        <span class=\"fa-stack fa-lg clickable\" [class.visibility-hidden]=\"!displayRightArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-right fa-stack-1x\"></i>\n        </span>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -1091,10 +1027,6 @@ var ChrisSoterosComponent = (function () {
         this.portfolioService.setCurrentPortfolioElement(this.portfolioService.helloWorldProject);
         this.displayRightArrow = !this.portfolioService.isLast(this.portfolioElement);
         this.displayLeftArrow = !this.portfolioService.isFirst(this.portfolioElement);
-        if (this.displayRightArrow)
-            this.nextTitle = this.portfolioService.getNextTitle();
-        if (this.displayLeftArrow)
-            this.prevTitle = this.portfolioService.getLastTitle();
     };
     ChrisSoterosComponent.prototype.onNextArrowClick = function () {
         this.portfolioService.goToNext();
@@ -1121,7 +1053,7 @@ var _a, _b;
 /***/ "../../../../../src/app/components/portfolio/miri/miri.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page-container\">\n  <div class=\"btn-left clickable\" (click)=\"onBackArrowClick()\" *ngIf=\"displayLeftArrow\">\n    <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"></i>\n  </div>\n  <div class=\"btn-right clickable\" (click)=\"onNextArrowClick()\" *ngIf=\"displayRightArrow\">\n    <i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>\n  </div>\n\n  <div class=\"project-header\">\n    <div class=\"title\">Miri</div>\n    <div class=\"subtitle\">Game Design and Development project</div>\n  </div>\n\n  <div class=\"page-inner\">\n    <div class=\"main-picture-container\">\n      <img src=\"assets/img/portfolio/miri_mockup.jpg\">\n    </div>\n\n    <div class=\"project-body\">\n\n      <div class=\"body-wrapper\">\n        <div class=\"description-container\">\n          <h3 class=\"section-title\">About</h3>\n          <p>For my Computer Science Design and Construction of Games and Interactive Systems class,\n            I worked with a group of three other students throughout the semester to design and develop\n            this game from scratch in Unity.</p>\n          <p>Miri is a tile-based puzzle platformer game with four playable characters that each have their own\n            abilities and limitations. All four exist in the level at the same time (except for the earlier levels),\n            and all four must reach the end before the player can move on to the next level. The player controls\n            one player at a time and uses their abilities in combination to solve puzzles and help the other\n            characters to reach the end.</p>\n          The four playable characters are as follows:\n          <ul>\n            <li><strong>Miri:</strong> A fit blue-skinned humanoid being. Can run fast and jump high</li>\n            <li><strong>Morigan:</strong> A magical witch. Can perform short jumps and conjure a single ramp block or\n              ladder, but not both at the same time.</li>\n            <li><strong>Olav:</strong> A burly Viking. Can walk through spikes and activate pressure plates by standing on them,\n              but can't jump.</li>\n            <li><strong>Ladder Guy:</strong> Just your average guy. Except he can climb ladders.</li>\n          </ul>\n        </div>\n\n        <div class=\"technologies-container\">\n          <h3 class=\"section-title\">Technologies Used</h3>\n          <ul>\n            <li>Unity</li>\n            <li>C#</li>\n            <li>Sketchbook Pro</li>\n          </ul>\n        </div>\n      </div>\n\n    </div>\n  </div>\n\n  <div class=\"button-container\">\n    <div class=\"btn-mobile-prev clickable\" (click)=\"onBackArrowClick()\">\n      <span class=\"fa-stack fa-lg clickable\" *ngIf=\"displayLeftArrow\">\n        <i class=\"fa fa-circle fa-stack-2x\"></i>\n        <i class=\"fa fa-chevron-left fa-stack-1x\"></i>\n      </span>\n      <span class=\"mobile-title\">{{prevTitle}}</span>\n    </div>\n    <div class=\"btn-mobile-menu clickable\" [routerLink]=\"['/portfolio']\">\n        <span class=\"fa-stack fa-lg clickable\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-th-large fa-stack-1x\"></i>\n        </span>\n    </div>\n    <div class=\"btn-mobile-next clickable\" (click)=\"onNextArrowClick()\">\n      <span class=\"mobile-title\">{{nextTitle}}</span>\n      <span class=\"fa-stack fa-lg\" *ngIf=\"displayRightArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-right fa-stack-1x\"></i>\n        </span>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"page-container\">\n  <div class=\"btn-left clickable\" (click)=\"onBackArrowClick()\" *ngIf=\"displayLeftArrow\">\n    <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"></i>\n  </div>\n  <div class=\"btn-right clickable\" (click)=\"onNextArrowClick()\" *ngIf=\"displayRightArrow\">\n    <i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>\n  </div>\n\n  <div class=\"project-header\">\n    <div class=\"title\">Miri</div>\n    <div class=\"subtitle\">Game Design and Development project</div>\n  </div>\n\n  <div class=\"page-inner\">\n    <div class=\"main-picture-container\">\n      <img src=\"assets/img/portfolio/miri/miri_mockup.jpg\">\n    </div>\n\n    <div class=\"project-body\">\n\n      <div class=\"body-wrapper\">\n        <div class=\"description-container\">\n          <h3 class=\"section-title\">About</h3>\n          <p>For my Computer Science Design and Construction of Games and Interactive Systems class,\n            I worked with a group of three other students throughout the semester to design and develop\n            this game from scratch in Unity.</p>\n          <p>Miri is a tile-based puzzle platformer game with four playable characters that each have their own\n            abilities and limitations. All four exist in the level at the same time (except for the earlier levels),\n            and all four must reach the end before the player can move on to the next level. The player controls\n            one player at a time and uses their abilities in combination to solve puzzles and help the other\n            characters to reach the end.</p>\n          The four playable characters are as follows:\n          <ul>\n            <li><strong>Miri:</strong> A fit blue-skinned humanoid being. Can run fast and jump high</li>\n            <li><strong>Morigan:</strong> A magical witch. Can perform short jumps and conjure a single ramp block or\n              ladder, but not both at the same time.</li>\n            <li><strong>Olav:</strong> A burly Viking. Can walk through spikes and activate pressure plates by standing on them,\n              but can't jump.</li>\n            <li><strong>Ladder Guy:</strong> Just your average guy. Except he can climb ladders.</li>\n          </ul>\n        </div>\n\n        <div class=\"technologies-container\">\n          <h3 class=\"section-title\">Technologies Used</h3>\n          <ul>\n            <li>Unity</li>\n            <li>C#</li>\n            <li>Sketchbook Pro</li>\n          </ul>\n        </div>\n      </div>\n\n    </div>\n  </div>\n\n  <div class=\"button-container\">\n    <div class=\"btn-mobile-prev\" (click)=\"onBackArrowClick()\">\n        <span class=\"fa-stack fa-lg clickable\" [class.visibility-hidden]=\"!displayLeftArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-left fa-stack-1x\"></i>\n        </span>\n    </div>\n    <div class=\"btn-mobile-menu\" [routerLink]=\"['/portfolio']\">\n      <span class=\"btn-back-to-portfolio clickable\">Back to Portfolio</span>\n    </div>\n    <div class=\"btn-mobile-next\" (click)=\"onNextArrowClick()\">\n        <span class=\"fa-stack fa-lg clickable\" [class.visibility-hidden]=\"!displayRightArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-right fa-stack-1x\"></i>\n        </span>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -1156,10 +1088,6 @@ var MiriComponent = (function () {
         this.portfolioService.setCurrentPortfolioElement(this.portfolioElement);
         this.displayRightArrow = !this.portfolioService.isLast(this.portfolioElement);
         this.displayLeftArrow = !this.portfolioService.isFirst(this.portfolioElement);
-        if (this.displayRightArrow)
-            this.nextTitle = this.portfolioService.getNextTitle();
-        if (this.displayLeftArrow)
-            this.prevTitle = this.portfolioService.getLastTitle();
     };
     MiriComponent.prototype.onNextArrowClick = function () {
         this.portfolioService.goToNext();
@@ -1191,7 +1119,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".page-container {\n  width: 100%;\n  min-height: 100%;\n  background-color: #ebebeb;\n  box-sizing: border-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-align: center;\n      align-items: center;\n  -ms-flex-direction: column;\n      flex-direction: column; }\n\n.body-wrapper {\n  display: -ms-flexbox;\n  display: flex; }\n\n.description-container {\n  min-width: 350px; }\n\n.page-inner {\n  width: 80%;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  padding: 10px 15px 20px 15px;\n  box-sizing: border-box;\n  line-height: 25px; }\n\n.main-picture-container {\n  width: 100%; }\n\n.main-picture-container img {\n  width: 100%;\n  box-shadow: 0 3px 5px #5f5f5f; }\n\n.project-header {\n  background-color: #494E6B;\n  color: #ebebeb;\n  text-align: center;\n  width: 100%;\n  padding: 75px 0 35px 0;\n  margin-bottom: 20px; }\n\n.project-body {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-align: start;\n      align-items: flex-start;\n  margin-bottom: 25px; }\n\n.section-title {\n  color: #985E6D;\n  position: relative; }\n\n.section-title:after {\n  content: \"\";\n  position: absolute;\n  bottom: -10px;\n  width: 50px;\n  left: 0;\n  background-color: #985E6D;\n  height: 2px; }\n\n.technologies-container .section-title {\n  white-space: nowrap; }\n\n.technologies-container {\n  margin-left: 20px;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  min-width: 0; }\n\n.technologies-container ul {\n  list-style-type: circle; }\n\n.technologies-container span {\n  border: 1px solid #192231;\n  color: #192231;\n  padding: 5px;\n  margin-bottom: 5px;\n  border-radius: 5px;\n  font-size: 14px; }\n\n.title {\n  font-size: 2.2rem; }\n\n.subtitle {\n  font-size: 1.3rem;\n  color: #cbcbcb; }\n\n.btn-circle {\n  border: 0;\n  background-color: #494E6B;\n  color: #ebebeb;\n  border-radius: 50%; }\n\n.btn-left {\n  position: fixed;\n  top: 50%;\n  left: 20px;\n  font-size: 24px;\n  color: #494E6B; }\n\n.btn-right {\n  position: fixed;\n  top: 50%;\n  right: 20px;\n  font-size: 24px;\n  color: #494E6B; }\n\n:host-context(body.hasHover) .btn-right:hover i {\n  transform: translateX(5px);\n  color: #192231;\n  z-index: 6; }\n\n:host-context(body.hasHover) .btn-left:hover i {\n  transform: translateX(-5px);\n  color: #192231; }\n\n.button-container {\n  color: #494E6B;\n  width: 100%;\n  position: relative;\n  height: 100px;\n  display: none; }\n\n.button-container .fa-chevron-left {\n  color: #ebebeb; }\n\n.button-container .fa-chevron-right {\n  color: #ebebeb; }\n\n.button-container .fa-stack {\n  -ms-flex-negative: 0;\n      flex-shrink: 0; }\n\n.button-container .fa-th-large {\n  color: #ebebeb; }\n\n.btn-mobile-prev {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-align: center;\n      align-items: center;\n  position: absolute;\n  left: 0;\n  max-width: 45%;\n  transition: all 0.5s ease; }\n\n:host-context(body.hasHover) .btn-mobile-prev:hover .fa-circle {\n  color: #192231;\n  transition: all 0.5s ease; }\n\n.btn-mobile-next {\n  position: absolute;\n  right: 0; }\n\n:host-context(body.hasHover) .btn-mobile-next:hover .fa-circle {\n  color: #192231;\n  transition: all 0.5s ease; }\n\n.btn-mobile-menu {\n  position: absolute;\n  left: 50%;\n  margin-left: -20px;\n  transition: all 0.5s ease; }\n\n:host-context(body.hasHover) .btn-mobile-menu:hover {\n  color: #192231; }\n\n@media (max-width: 780px) {\n  .page-inner {\n    width: 100%; }\n  .btn-right {\n    display: none; }\n  .body-wrapper {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap; }\n  .btn-left {\n    display: none; }\n  .button-container {\n    display: block; } }\n", ""]);
+exports.push([module.i, ".page-container {\n  width: 100%;\n  min-height: 100%;\n  background-color: #ebebeb;\n  box-sizing: border-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-align: center;\n      align-items: center;\n  -ms-flex-direction: column;\n      flex-direction: column; }\n\n.body-wrapper {\n  display: -ms-flexbox;\n  display: flex; }\n\n.description-container {\n  min-width: 350px; }\n\n.page-inner {\n  width: 80%;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  padding: 10px 15px 20px 15px;\n  box-sizing: border-box;\n  line-height: 25px; }\n\n.main-picture-container {\n  width: 100%; }\n\n.main-picture-container img {\n  width: 100%;\n  box-shadow: 0 3px 5px #5f5f5f; }\n\n.project-header {\n  box-sizing: border-box;\n  background-color: #494E6B;\n  color: #ebebeb;\n  text-align: center;\n  width: 100%;\n  padding: 75px 10px 35px 10px;\n  margin-bottom: 20px; }\n\n.project-body {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-align: start;\n      align-items: flex-start;\n  margin-bottom: 25px; }\n\n.section-title {\n  color: #985E6D;\n  position: relative; }\n\n.section-title:after {\n  content: \"\";\n  position: absolute;\n  bottom: -10px;\n  width: 50px;\n  left: 0;\n  background-color: #985E6D;\n  height: 2px; }\n\n.technologies-container .section-title {\n  white-space: nowrap; }\n\n.technologies-container {\n  margin-left: 20px;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  min-width: 0; }\n\n.technologies-container ul {\n  list-style-type: circle; }\n\n.technologies-container span {\n  border: 1px solid #192231;\n  color: #192231;\n  padding: 5px;\n  margin-bottom: 5px;\n  border-radius: 5px;\n  font-size: 14px; }\n\n.title {\n  font-size: 2.2rem; }\n\n.subtitle {\n  font-size: 1.3rem;\n  color: #cbcbcb; }\n\n.btn-circle {\n  border: 0;\n  background-color: #494E6B;\n  color: #ebebeb;\n  border-radius: 50%; }\n\n.btn-left {\n  position: fixed;\n  top: 50%;\n  left: 20px;\n  font-size: 24px;\n  color: #494E6B; }\n\n.btn-right {\n  position: fixed;\n  top: 50%;\n  right: 20px;\n  font-size: 24px;\n  color: #494E6B; }\n\n:host-context(body.hasHover) .btn-right:hover i {\n  transform: translateX(5px);\n  color: #192231;\n  z-index: 6; }\n\n:host-context(body.hasHover) .btn-left:hover i {\n  transform: translateX(-5px);\n  color: #192231; }\n\n.button-container {\n  color: #494E6B;\n  width: 100%;\n  display: none;\n  -ms-flex-pack: justify;\n      justify-content: space-between;\n  -ms-flex-align: center;\n      align-items: center;\n  margin-bottom: 30px; }\n\n.btn-back-to-portfolio {\n  background-color: #494E6B;\n  color: #ebebeb;\n  padding: 10px; }\n\n:host-context(body.hasHover) .btn-back-to-portfolio:hover {\n  background-color: #192231;\n  transition: all 0.5s ease; }\n\n.button-container .fa-stack {\n  -ms-flex-negative: 0;\n      flex-shrink: 0; }\n\n.button-container .fa-th-large {\n  color: #ebebeb; }\n\n.visibility-hidden {\n  visibility: hidden; }\n\n:host-context(body.hasHover) .btn-mobile-prev:hover .fa-circle {\n  color: #192231;\n  transition: all 0.5s ease; }\n\n.btn-mobile-next .fa-chevron-right {\n  color: #ebebeb;\n  margin-top: 2px;\n  margin-left: 2px; }\n\n.btn-mobile-prev .fa-chevron-left {\n  color: #ebebeb;\n  margin-top: 2px;\n  margin-right: 2px; }\n\n:host-context(body.hasHover) .btn-mobile-next:hover .fa-circle {\n  color: #192231;\n  transition: all 0.5s ease; }\n\n:host-context(body.hasHover) .btn-mobile-menu:hover {\n  color: #192231; }\n\n@media (max-width: 780px) {\n  .page-inner {\n    width: 100%; }\n  .btn-right {\n    display: none; }\n  .body-wrapper {\n    -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n    -ms-flex-direction: column-reverse;\n        flex-direction: column-reverse; }\n  .btn-left {\n    display: none; }\n  .button-container {\n    display: -ms-flexbox;\n    display: flex; }\n  .title {\n    font-size: 2rem; }\n  .subtitle {\n    font-size: 1.1rem; }\n  .technologies-container {\n    margin-left: 0; }\n  .technologies-container ul {\n    list-style: none;\n    padding: 0;\n    margin-bottom: 0; }\n  .technologies-container li {\n    display: inline-block;\n    position: relative;\n    padding: 5px 10px 0 0; }\n  .technologies-container li:not(:last-child):after {\n    content: \"|\";\n    color: #cbcbcb;\n    font-size: 1.3rem;\n    position: absolute;\n    right: 0; } }\n", ""]);
 
 // exports
 
@@ -1272,10 +1200,71 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/portfolio/reactive-dev-day/reactive-dev-day.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"page-container\">\n  <div class=\"btn-left clickable\" (click)=\"onBackArrowClick()\" *ngIf=\"displayLeftArrow\">\n    <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"></i>\n  </div>\n  <div class=\"btn-right clickable\" (click)=\"onNextArrowClick()\" *ngIf=\"displayRightArrow\">\n    <i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>\n  </div>\n\n  <div class=\"project-header\">\n    <div class=\"title\">Angular Reactive Forms Dev Day</div>\n    <div class=\"subtitle\">Web Development Tutorials</div>\n  </div>\n\n  <div class=\"page-inner\">\n\n    <div class=\"main-picture-container\">\n      <img src=\"assets/img/portfolio/reactive-dev-day/exercise07.png\">\n    </div>\n\n    <div class=\"project-body\">\n\n      <div class=\"body-wrapper\">\n        <div class=\"description-container\">\n          <h3 class=\"section-title\">About</h3>\n          <p>During my time interning at Farm Credit Canada, I had the opportunity to create a Development Day.\n          Dev Days were a monthly day-long development event at FCC with the purpose of educating and exposing\n          developments to new or useful technologies. I spent a few months researching and putting together\n            exercises on Angular's Reactive Forms API, which we were just starting to use at FCC. I tried\n          to make the exercises fun but also informative, which is no easy task for forms.</p>\n\n          <p>\n            Angular's Reactive Forms API is one of the solutions that Angular provides for constructing form\n            models. I developed 9 exercises covering the following topics:\n          </p>\n          <ul>\n            <li>The Basics</li>\n            <li>Form Builder</li>\n            <li>Nested Forms</li>\n            <li>Form Arrays</li>\n            <li>Validation</li>\n            <li>Form States</li>\n            <li>Custom and Async Validation</li>\n            <li>Dynamic Forms</li>\n            <li>Custom Controls</li>\n          </ul>\n        </div>\n\n        <div class=\"technologies-container\">\n          <h3 class=\"section-title\">Technologies</h3>\n          <ul>\n            <li>Angular</li>\n          </ul>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"button-container\">\n      <div class=\"btn-mobile-prev\" (click)=\"onBackArrowClick()\">\n        <span class=\"fa-stack fa-lg clickable\" [class.visibility-hidden]=\"!displayLeftArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-left fa-stack-1x\"></i>\n        </span>\n      </div>\n      <div class=\"btn-mobile-menu\" [routerLink]=\"['/portfolio']\">\n        <span class=\"btn-back-to-portfolio clickable\">Back to Portfolio</span>\n      </div>\n      <div class=\"btn-mobile-next\" (click)=\"onNextArrowClick()\">\n        <span class=\"fa-stack fa-lg clickable\" [class.visibility-hidden]=\"!displayRightArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-right fa-stack-1x\"></i>\n        </span>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/portfolio/reactive-dev-day/reactive-dev-day.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_portfolio_service__ = __webpack_require__("../../../../../src/app/services/portfolio.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_navigation_service__ = __webpack_require__("../../../../../src/app/services/navigation.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReactiveDevDayComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ReactiveDevDayComponent = (function () {
+    function ReactiveDevDayComponent(navigationService, portfolioService) {
+        this.navigationService = navigationService;
+        this.portfolioService = portfolioService;
+    }
+    ReactiveDevDayComponent.prototype.ngOnInit = function () {
+        this.navigationService.setScrollPercentage(0);
+        this.portfolioElement = this.portfolioService.reactiveDevDay;
+        this.portfolioService.setCurrentPortfolioElement(this.portfolioElement);
+        this.displayRightArrow = !this.portfolioService.isLast(this.portfolioElement);
+        this.displayLeftArrow = !this.portfolioService.isFirst(this.portfolioElement);
+    };
+    ReactiveDevDayComponent.prototype.onNextArrowClick = function () {
+        this.portfolioService.goToNext();
+    };
+    ReactiveDevDayComponent.prototype.onBackArrowClick = function () {
+        this.portfolioService.goBack();
+    };
+    return ReactiveDevDayComponent;
+}());
+ReactiveDevDayComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+        selector: 'reactive-dev-day',
+        template: __webpack_require__("../../../../../src/app/components/portfolio/reactive-dev-day/reactive-dev-day.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/portfolio/portfolio-template.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_navigation_service__["a" /* NavigationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_navigation_service__["a" /* NavigationService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_portfolio_service__["a" /* PortfolioService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_portfolio_service__["a" /* PortfolioService */]) === "function" && _b || Object])
+], ReactiveDevDayComponent);
+
+var _a, _b;
+//# sourceMappingURL=reactive-dev-day.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/portfolio/tobii-eyex/tobii-eyex.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page-container\">\n  <div class=\"btn-left clickable\" (click)=\"onBackArrowClick()\" *ngIf=\"displayLeftArrow\">\n    <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"></i>\n  </div>\n  <div class=\"btn-right clickable\" (click)=\"onNextArrowClick()\" *ngIf=\"displayRightArrow\">\n    <i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>\n  </div>\n\n  <div class=\"project-header\">\n    <div class=\"title\">Eye Tracking Research</div>\n    <div class=\"subtitle\">Application Development, Research Project</div>\n  </div>\n\n  <div class=\"page-inner\">\n    <div class=\"main-picture-container\">\n      <img src=\"assets/img/portfolio/tobii_eyex.JPG\">\n    </div>\n\n    <div class=\"project-body\">\n\n      <div class=\"body-wrapper\">\n        <div class=\"description-container\">\n          <h3 class=\"section-title\">About</h3>\n          In preparation for a proposed Hackathon event with an eye tracking theme,\n          I was asked by a professor from the\n          University of Regina to do some research into different eye tracking technologies and\n          explore their capabilities.\n\n          <p>I looked into several tracking hardware, and a few application that just utilized a webcam, but I found\n            that the Tobii EyeX to be the best option in terms of performance, cost, and practicality for\n            such an event, so I did most of my development with Tobii's APIs and data streams.\n\n          <p>After playing around with the EyeX and seeing what it could do, I discovered that it was pretty\n            accurate at detecting where my eyes where looking on the screen, but it was very jittery and jumped around\n            the location that I was looking a lot. So I first created several smoothing filters that I applied over\n            the data stream. They affected responsiveness slightly, but they all greatly improved the smoothness of\n            the gaze point and improved user experience.</p>\n\n          <p>I then created an application in Unity that allowed the user to draw with their eyes. With the highest\n            smoothing filter applied, drawing was an enjoyable experience that did not put much strain on the eyes.</p>\n\n          <p>I took it another step an created a Windows form application that allowed to control the mouse cursor\n            with their eyes, change smooth filter settings, and click with the press of a keyboard button. This allowed\n            the user the potential to draw with their gaze in other applications, or just replace the mouse with their\n            eyes all-together.</p>\n\n          <p>Finally, I started looking into the possibility of gesture controls using head position, and\n            control using blinks or winks.</p>\n        </div>\n\n        <div class=\"technologies-container\">\n          <h3 class=\"section-title\">Technologies Used</h3>\n          <ul>\n            <li>C#</li>\n            <li>Unity</li>\n            <li>Tobii EyeX</li>\n          </ul>\n        </div>\n      </div>\n\n    </div>\n  </div>\n\n  <div class=\"button-container\">\n    <div class=\"btn-mobile-prev clickable\" (click)=\"onBackArrowClick()\">\n      <span class=\"fa-stack fa-lg clickable\" *ngIf=\"displayLeftArrow\">\n        <i class=\"fa fa-circle fa-stack-2x\"></i>\n        <i class=\"fa fa-chevron-left fa-stack-1x\"></i>\n      </span>\n      <span class=\"mobile-title\">{{prevTitle}}</span>\n    </div>\n    <div class=\"btn-mobile-menu clickable\" [routerLink]=\"['/portfolio']\">\n        <span class=\"fa-stack fa-lg clickable\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-th-large fa-stack-1x\"></i>\n        </span>\n    </div>\n    <div class=\"btn-mobile-next clickable\" (click)=\"onNextArrowClick()\">\n      <span class=\"mobile-title\">{{nextTitle}}</span>\n      <span class=\"fa-stack fa-lg\" *ngIf=\"displayRightArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-right fa-stack-1x\"></i>\n        </span>\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"page-container\">\n  <div class=\"btn-left clickable\" (click)=\"onBackArrowClick()\" *ngIf=\"displayLeftArrow\">\n    <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"></i>\n  </div>\n  <div class=\"btn-right clickable\" (click)=\"onNextArrowClick()\" *ngIf=\"displayRightArrow\">\n    <i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>\n  </div>\n\n  <div class=\"project-header\">\n    <div class=\"title\">Eye Tracking Research</div>\n    <div class=\"subtitle\">Application Development, Research Project</div>\n  </div>\n\n  <div class=\"page-inner\">\n    <div class=\"main-picture-container\">\n      <img src=\"assets/img/portfolio/tobii_eyex.JPG\">\n    </div>\n\n    <div class=\"project-body\">\n\n      <div class=\"body-wrapper\">\n        <div class=\"description-container\">\n          <h3 class=\"section-title\">About</h3>\n          In preparation for a proposed Hackathon event with an eye tracking theme,\n          I was asked by a professor from the\n          University of Regina to do some research into different eye tracking technologies and\n          explore their capabilities.\n\n          <p>I looked into several tracking hardware, and a few application that just utilized a webcam, but I found\n            that the Tobii EyeX to be the best option in terms of performance, cost, and practicality for\n            such an event, so I did most of my development with Tobii's APIs and data streams.\n\n          <p>After playing around with the EyeX and seeing what it could do, I discovered that it was pretty\n            accurate at detecting where my eyes where looking on the screen, but it was very jittery and jumped around\n            the location that I was looking a lot. So I first created several smoothing filters that I applied over\n            the data stream. They affected responsiveness slightly, but they all greatly improved the smoothness of\n            the gaze point and improved user experience.</p>\n\n          <p>I then created an application in Unity that allowed the user to draw with their eyes. With the highest\n            smoothing filter applied, drawing was an enjoyable experience that did not put much strain on the eyes.</p>\n\n          <p>I took it another step an created a Windows form application that allowed to control the mouse cursor\n            with their eyes, change smooth filter settings, and click with the press of a keyboard button. This allowed\n            the user the potential to draw with their gaze in other applications, or just replace the mouse with their\n            eyes all-together.</p>\n\n          <p>Finally, I started looking into the possibility of gesture controls using head position, and\n            control using blinks or winks.</p>\n        </div>\n\n        <div class=\"technologies-container\">\n          <h3 class=\"section-title\">Technologies Used</h3>\n          <ul>\n            <li>C#</li>\n            <li>Unity</li>\n            <li>Tobii EyeX</li>\n          </ul>\n        </div>\n      </div>\n\n    </div>\n  </div>\n\n  <div class=\"button-container\">\n    <div class=\"btn-mobile-prev\" (click)=\"onBackArrowClick()\">\n        <span class=\"fa-stack fa-lg clickable\" [class.visibility-hidden]=\"!displayLeftArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-left fa-stack-1x\"></i>\n        </span>\n    </div>\n    <div class=\"btn-mobile-menu\" [routerLink]=\"['/portfolio']\">\n      <span class=\"btn-back-to-portfolio clickable\">Back to Portfolio</span>\n    </div>\n    <div class=\"btn-mobile-next\" (click)=\"onNextArrowClick()\">\n        <span class=\"fa-stack fa-lg clickable\" [class.visibility-hidden]=\"!displayRightArrow\">\n          <i class=\"fa fa-circle fa-stack-2x\"></i>\n          <i class=\"fa fa-chevron-right fa-stack-1x\"></i>\n        </span>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -1310,10 +1299,6 @@ var TobiiEyeXComponent = (function () {
         this.portfolioService.setCurrentPortfolioElement(this.portfolioElement);
         this.displayRightArrow = !this.portfolioService.isLast(this.portfolioElement);
         this.displayLeftArrow = !this.portfolioService.isFirst(this.portfolioElement);
-        if (this.displayRightArrow)
-            this.nextTitle = this.portfolioService.getNextTitle();
-        if (this.displayLeftArrow)
-            this.prevTitle = this.portfolioService.getLastTitle();
     };
     TobiiEyeXComponent.prototype.onNextArrowClick = function () {
         this.portfolioService.goToNext();
@@ -1637,10 +1622,12 @@ var PortfolioService = (function () {
             tags: ['Game Development'], linkPath: '/portfolio/miri-game' };
         this.tobiiEyeX = { title: "Eye Tracking Research", imagePath: basePath + "tobii_eyex.JPG",
             tags: ['Application Development, Research'], linkPath: '/portfolio/eye-tracking-research' };
+        this.reactiveDevDay = { title: "Angular Reactive Forms Dev Day", imagePath: basePath + "/reactive-dev-day/exercise07.png",
+            tags: ['Web Development, Tutorials'], linkPath: '/portfolio/reactive-dev-day' };
         this.portfolioWork = [];
         this.featuredWork = [];
-        this.portfolioWork = [this.helloWorldProject, this.miri, this.tobiiEyeX];
-        this.featuredWork = [this.helloWorldProject, this.miri, this.tobiiEyeX];
+        this.portfolioWork = [this.helloWorldProject, this.miri, this.tobiiEyeX, this.reactiveDevDay];
+        this.featuredWork = [this.helloWorldProject, this.miri, this.tobiiEyeX, this.reactiveDevDay];
     }
     PortfolioService.prototype.getFeaturedPortfolioWork = function () {
         return this.featuredWork;
