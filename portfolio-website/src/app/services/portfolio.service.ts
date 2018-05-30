@@ -16,6 +16,9 @@ export class PortfolioService {
   tobiiEyeX: PortfolioElement =
     {title: "Eye Tracking Research", imagePath:basePath+"tobii_eyex.JPG",
       tags: ['Application Development, Research'], linkPath: '/portfolio/eye-tracking-research'};
+  reactiveDevDay: PortfolioElement =
+    {title: "Angular Reactive Forms Dev Day", imagePath:basePath+"/reactive-dev-day/exercise07.png",
+    tags: ['Web Development, Tutorials'], linkPath:'/portfolio/reactive-dev-day'};
 
   portfolioWork: Array<PortfolioElement> = [];
   featuredWork: Array<PortfolioElement> = [];
@@ -23,8 +26,8 @@ export class PortfolioService {
   private currentPortfolioElement: PortfolioElement;
 
   constructor(private router: Router) {
-    this.portfolioWork = [this.helloWorldProject, this.miri, this.tobiiEyeX];
-    this.featuredWork = [this.helloWorldProject, this.miri, this.tobiiEyeX];
+    this.portfolioWork = [this.helloWorldProject, this.miri, this.tobiiEyeX, this.reactiveDevDay];
+    this.featuredWork = [this.helloWorldProject, this.miri, this.tobiiEyeX, this.reactiveDevDay];
   }
 
   getFeaturedPortfolioWork(): Array<PortfolioElement>{

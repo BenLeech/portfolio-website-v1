@@ -1,0 +1,77 @@
+<div class="page-container">
+  <div class="btn-left clickable" (click)="onBackArrowClick()" *ngIf="displayLeftArrow">
+    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+  </div>
+  <div class="btn-right clickable" (click)="onNextArrowClick()" *ngIf="displayRightArrow">
+    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+  </div>
+
+  <div class="project-header">
+    <div class="title">Angular Reactive Forms Dev Day</div>
+    <div class="subtitle">Web Development Tutorials</div>
+  </div>
+
+  <div class="page-inner">
+
+    <div class="main-picture-container">
+      <img src="assets/img/portfolio/reactive-dev-day/exercise07.png">
+    </div>
+
+    <div class="project-body">
+
+      <div class="body-wrapper">
+        <div class="description-container">
+          <h3 class="section-title">About</h3>
+          <p>During my time interning at Farm Credit Canada, I had the opportunity to create a Development Day.
+          Dev Days were a monthly day-long development event at FCC with the purpose of educating and exposing
+          developments to new or useful technologies. I spent a few months researching and putting together
+            exercises on Angular's Reactive Forms API, which we were just starting to use at FCC. I tried
+          to make the exercises fun but also informative, which is no easy task for forms.</p>
+
+          <p>
+            Angular's Reactive Forms API is one of the solutions that Angular provides for constructing form
+            models. I developed 9 exercises covering the following topics:
+          </p>
+          <ul>
+            <li>The Basics</li>
+            <li>Form Builder</li>
+            <li>Nested Forms</li>
+            <li>Form Arrays</li>
+            <li>Validation</li>
+            <li>Form States</li>
+            <li>Custom and Async Validation</li>
+            <li>Dynamic Forms</li>
+            <li>Custom Controls</li>
+          </ul>
+        </div>
+
+        <div class="technologies-container">
+          <h3 class="section-title">Technologies</h3>
+          <ul>
+            <li>Angular</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="button-container">
+      <div class="btn-mobile-prev" (click)="onBackArrowClick()">
+        <span class="fa-stack fa-lg clickable" [class.visibility-hidden]="!displayLeftArrow">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-chevron-left fa-stack-1x"></i>
+        </span>
+      </div>
+      <div class="btn-mobile-menu" [routerLink]="['/portfolio']">
+        <span class="btn-back-to-portfolio clickable">Back to Portfolio</span>
+      </div>
+      <div class="btn-mobile-next" (click)="onNextArrowClick()">
+        <span class="fa-stack fa-lg clickable" [class.visibility-hidden]="!displayRightArrow">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-chevron-right fa-stack-1x"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+</div>

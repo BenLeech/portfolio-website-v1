@@ -21,6 +21,7 @@ import {TobiiEyeXComponent} from "./components/portfolio/tobii-eyex/tobii-eyex.c
 import {FadeToTopDirective} from "./directives/fade-to-top.directive";
 import {ParallaxDirective} from "./directives/parallax.directive";
 import {PortfolioDisplay2Component} from "./components/common/portfolio-display/portfolio-display.component";
+import {ReactiveDevDayComponent} from "./components/portfolio/reactive-dev-day/reactive-dev-day.component";
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {PortfolioDisplay2Component} from "./components/common/portfolio-display/
     ChrisSoterosComponent,
     MiriComponent,
     TobiiEyeXComponent,
+    ReactiveDevDayComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule, BrowserAnimationsModule, RouterModule
